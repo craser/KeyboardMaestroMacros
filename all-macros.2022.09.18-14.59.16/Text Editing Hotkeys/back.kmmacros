@@ -6,7 +6,7 @@
 		<key>Activate</key>
 		<string>Normal</string>
 		<key>CreationDate</key>
-		<real>667507682.07719004</real>
+		<real>662928075.62198102</real>
 		<key>Macros</key>
 		<array>
 			<dict>
@@ -14,13 +14,13 @@
 				<array>
 					<dict>
 						<key>ActionUID</key>
-						<integer>5737</integer>
+						<integer>1165</integer>
 						<key>KeyCode</key>
-						<integer>36</integer>
+						<integer>123</integer>
 						<key>MacroActionType</key>
 						<string>SimulateKeystroke</string>
 						<key>Modifiers</key>
-						<integer>512</integer>
+						<integer>196608</integer>
 						<key>ReleaseAll</key>
 						<false/>
 						<key>TargetApplication</key>
@@ -30,32 +30,30 @@
 					</dict>
 				</array>
 				<key>CreationDate</key>
-				<real>667507688.95520699</real>
-				<key>IsActive</key>
-				<false/>
+				<real>662928147.53017902</real>
 				<key>ModificationDate</key>
-				<real>667507720.92219305</real>
+				<real>662955425.03619897</real>
 				<key>Name</key>
-				<string>ENTER does NOT send</string>
+				<string>back</string>
 				<key>Triggers</key>
 				<array>
 					<dict>
 						<key>FireType</key>
 						<string>Pressed</string>
 						<key>KeyCode</key>
-						<integer>36</integer>
+						<integer>11</integer>
 						<key>MacroTriggerType</key>
 						<string>HotKey</string>
 						<key>Modifiers</key>
-						<integer>0</integer>
+						<integer>4096</integer>
 					</dict>
 				</array>
 				<key>UID</key>
-				<string>51EE8F98-7AC6-4E98-A35B-D8CC1B621BBA</string>
+				<string>3B36E087-B164-4DAA-8AB1-644397E70297</string>
 			</dict>
 		</array>
 		<key>Name</key>
-		<string>Slack Customization</string>
+		<string>Text Editing Hotkeys</string>
 		<key>Targeting</key>
 		<dict>
 			<key>Targeting</key>
@@ -64,18 +62,50 @@
 			<array>
 				<dict>
 					<key>BundleIdentifier</key>
+					<string>com.omnigroup.OmniFocus3.MacAppStore</string>
+					<key>Name</key>
+					<string>OmniFocus</string>
+					<key>NewFile</key>
+					<string>/Applications/OmniFocus.localized/OmniFocus.app</string>
+				</dict>
+				<dict>
+					<key>BundleIdentifier</key>
+					<string>org.xmind.cathy.application</string>
+					<key>Name</key>
+					<string>XMind</string>
+					<key>NewFile</key>
+					<string>/Applications/XMind.app</string>
+				</dict>
+				<dict>
+					<key>BundleIdentifier</key>
 					<string>com.tinyspeck.slackmacgap</string>
 					<key>Name</key>
 					<string>Slack</string>
 					<key>NewFile</key>
 					<string>/Applications/Slack.app</string>
 				</dict>
+				<dict>
+					<key>BundleIdentifier</key>
+					<string>com.google.Chrome</string>
+					<key>Name</key>
+					<string>Google Chrome</string>
+					<key>NewFile</key>
+					<string>/Applications/Google Chrome.app</string>
+				</dict>
+				<dict>
+					<key>BundleIdentifier</key>
+					<string>com.microsoft.Outlook</string>
+					<key>Name</key>
+					<string>Microsoft Outlook</string>
+					<key>NewFile</key>
+					<string>/Applications/Microsoft Outlook.app</string>
+				</dict>
 			</array>
 		</dict>
 		<key>ToggleMacroUID</key>
-		<string>6B1227A8-1249-4B7C-B046-DFA95B0FA947</string>
+		<string>A5CDBB90-7F61-4AE5-8E1B-5E06D607ECA1</string>
 		<key>UID</key>
-		<string>2EF7EED3-C95C-4A27-9821-5F2D3AC4A469</string>
+		<string>083A279D-54C5-40BD-9E8D-D23FF198769C</string>
 	</dict>
 </array>
 </plist>

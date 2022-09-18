@@ -6,7 +6,7 @@
 		<key>Activate</key>
 		<string>Normal</string>
 		<key>CreationDate</key>
-		<real>667507682.07719004</real>
+		<real>665601254.25515699</real>
 		<key>Macros</key>
 		<array>
 			<dict>
@@ -14,13 +14,13 @@
 				<array>
 					<dict>
 						<key>ActionUID</key>
-						<integer>5737</integer>
+						<integer>4617</integer>
 						<key>KeyCode</key>
-						<integer>36</integer>
+						<integer>39</integer>
 						<key>MacroActionType</key>
 						<string>SimulateKeystroke</string>
 						<key>Modifiers</key>
-						<integer>512</integer>
+						<integer>2304</integer>
 						<key>ReleaseAll</key>
 						<false/>
 						<key>TargetApplication</key>
@@ -30,32 +30,30 @@
 					</dict>
 				</array>
 				<key>CreationDate</key>
-				<real>667507688.95520699</real>
-				<key>IsActive</key>
-				<false/>
+				<real>665601271.80511498</real>
 				<key>ModificationDate</key>
-				<real>667507720.92219305</real>
+				<real>665601292.57661605</real>
 				<key>Name</key>
-				<string>ENTER does NOT send</string>
+				<string>Close Notes</string>
 				<key>Triggers</key>
 				<array>
 					<dict>
 						<key>FireType</key>
 						<string>Pressed</string>
 						<key>KeyCode</key>
-						<integer>36</integer>
+						<integer>39</integer>
 						<key>MacroTriggerType</key>
 						<string>HotKey</string>
 						<key>Modifiers</key>
-						<integer>0</integer>
+						<integer>768</integer>
 					</dict>
 				</array>
 				<key>UID</key>
-				<string>51EE8F98-7AC6-4E98-A35B-D8CC1B621BBA</string>
+				<string>D191C7D2-951A-4F0B-86D9-57A023E38763</string>
 			</dict>
 		</array>
 		<key>Name</key>
-		<string>Slack Customization</string>
+		<string>OmniFocus Macros</string>
 		<key>Targeting</key>
 		<dict>
 			<key>Targeting</key>
@@ -64,18 +62,18 @@
 			<array>
 				<dict>
 					<key>BundleIdentifier</key>
-					<string>com.tinyspeck.slackmacgap</string>
+					<string>com.omnigroup.OmniFocus3.MacAppStore</string>
 					<key>Name</key>
-					<string>Slack</string>
+					<string>OmniFocus</string>
 					<key>NewFile</key>
-					<string>/Applications/Slack.app</string>
+					<string>/Applications/OmniFocus.localized/OmniFocus.app</string>
 				</dict>
 			</array>
 		</dict>
 		<key>ToggleMacroUID</key>
-		<string>6B1227A8-1249-4B7C-B046-DFA95B0FA947</string>
+		<string>A6415B66-528D-4E59-86C7-A90D09527B3B</string>
 		<key>UID</key>
-		<string>2EF7EED3-C95C-4A27-9821-5F2D3AC4A469</string>
+		<string>70ADEC46-8A0B-4DFC-826C-6C93CAFA2F2A</string>
 	</dict>
 </array>
 </plist>

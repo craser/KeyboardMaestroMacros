@@ -14,13 +14,13 @@
 				<array>
 					<dict>
 						<key>ActionUID</key>
-						<integer>5737</integer>
+						<integer>5738</integer>
 						<key>KeyCode</key>
 						<integer>36</integer>
 						<key>MacroActionType</key>
 						<string>SimulateKeystroke</string>
 						<key>Modifiers</key>
-						<integer>512</integer>
+						<integer>0</integer>
 						<key>ReleaseAll</key>
 						<false/>
 						<key>TargetApplication</key>
@@ -30,28 +30,15 @@
 					</dict>
 				</array>
 				<key>CreationDate</key>
-				<real>667507688.95520699</real>
-				<key>IsActive</key>
-				<false/>
+				<real>667507731.12913704</real>
 				<key>ModificationDate</key>
-				<real>667507720.92219305</real>
+				<real>667507749.88622403</real>
 				<key>Name</key>
-				<string>ENTER does NOT send</string>
+				<string>CMD-ENTER DOES send</string>
 				<key>Triggers</key>
-				<array>
-					<dict>
-						<key>FireType</key>
-						<string>Pressed</string>
-						<key>KeyCode</key>
-						<integer>36</integer>
-						<key>MacroTriggerType</key>
-						<string>HotKey</string>
-						<key>Modifiers</key>
-						<integer>0</integer>
-					</dict>
-				</array>
+				<array/>
 				<key>UID</key>
-				<string>51EE8F98-7AC6-4E98-A35B-D8CC1B621BBA</string>
+				<string>C10D18B5-AA10-4498-B088-723986EB20F6</string>
 			</dict>
 		</array>
 		<key>Name</key>
