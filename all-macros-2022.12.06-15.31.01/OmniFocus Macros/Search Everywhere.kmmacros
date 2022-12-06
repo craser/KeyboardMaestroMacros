@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>665601254.25515699</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>ActionUID</key>
+						<integer>807588</integer>
+						<key>MacroActionType</key>
+						<string>SelectMenuItem</string>
+						<key>Menu</key>
+						<array>
+							<string>Edit</string>
+							<string>Find</string>
+							<string>Find...</string>
+						</array>
+						<key>TargetApplication</key>
+						<dict/>
+						<key>TargetingType</key>
+						<string>Front</string>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>689552016.01513004</real>
+				<key>ModificationDate</key>
+				<real>689552478.03810203</real>
+				<key>Name</key>
+				<string>Search Everywhere</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>FireType</key>
+						<string>Pressed</string>
+						<key>KeyCode</key>
+						<integer>3</integer>
+						<key>MacroTriggerType</key>
+						<string>HotKey</string>
+						<key>Modifiers</key>
+						<integer>4352</integer>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>801EBE27-6321-4A6B-94CD-915356865AD0</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>OmniFocus Macros</string>
+		<key>Targeting</key>
+		<dict>
+			<key>Targeting</key>
+			<string>Included</string>
+			<key>TargetingApps</key>
+			<array>
+				<dict>
+					<key>BundleIdentifier</key>
+					<string>com.omnigroup.OmniFocus3.MacAppStore</string>
+					<key>Name</key>
+					<string>OmniFocus</string>
+					<key>NewFile</key>
+					<string>/Applications/OmniFocus.localized/OmniFocus.app</string>
+				</dict>
+			</array>
+		</dict>
+		<key>ToggleMacroUID</key>
+		<string>A6415B66-528D-4E59-86C7-A90D09527B3B</string>
+		<key>UID</key>
+		<string>70ADEC46-8A0B-4DFC-826C-6C93CAFA2F2A</string>
+	</dict>
+</array>
+</plist>
