@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>657154187.54435599</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>ActionUID</key>
+						<integer>821569</integer>
+						<key>DisplayKind</key>
+						<string>None</string>
+						<key>HonourFailureSettings</key>
+						<true/>
+						<key>IncludeStdErr</key>
+						<false/>
+						<key>IncludedVariables</key>
+						<array>
+							<string>9999</string>
+						</array>
+						<key>MacroActionType</key>
+						<string>ExecuteAppleScript</string>
+						<key>Path</key>
+						<string></string>
+						<key>Text</key>
+						<string>property ptyScriptName : "Move Windows to Main Screen"
+property ptyScriptVer : "2.1" --  CHG formulas for extracting screen coordinates
+property ptyScriptDate : "2021-02-24" # Search for ALL Apps
+property ptyScriptAuthor : "JMichaelTX"
+
+property LF : linefeed
+(*
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+REQUIRED:
+  1.  macOS El Capitan 10.11.6+
+      (may work on Yosemite 10.10.5, but no guarantees)
+      
+Local:  /Users/Shared/Dropbox/SW/DEV/KM/Scripts/Move Windows to Main Screen V2.1.scpt
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  
+*)
+
+use AppleScript version "2.4"
+use framework "Foundation"
+use framework "AppKit"
+use scripting additions
+
+--- OFFSETS Used When Moving Windows ---
+property ptyOffsetX : 20
+property ptyOffsetY : 40
+
+set scriptResults to "TBD"
+
+try
+	--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	set frontApp to path to frontmost application as text -- use for dialogs
+	
+	--- GET COORDINATES OF PRIMARY VISIBLE SCREEN ---
+	-- (all windows to the right, or to the left, of this will be moved)
+	
+	set primaryScreenVisibleFrame to current application's NSScreen's screens()'s firstObject()'s visibleFrame()
+	
+	set primaryScreenLeft to (item 1 of item 1 of primaryScreenVisibleFrame)
+	set primaryScreenRight to (primaryScreenLeft) + (item 1 of item 2 of primaryScreenVisibleFrame)
+	set primaryScreenTop to (item 2 of item 1 of primaryScreenVisibleFrame)
+	set primaryScreenBottom to (primaryScreenTop) + (item 2 of item 2 of primaryScreenVisibleFrame)
+	
+	
+	(*
+--- ALTERNATE METHOD Using KM ---
+tell application "Keyboard Maestro Engine"
+  set AppleScript's text item delimiters to ","
+  set primaryScreenVisibleFrame to text items of (process tokens "%ScreenVisible%Main%")
+  set primaryScreenRight to item 3 of mainScreenFrame
+end tell
+*)
+	
+	--- GET ALL VISIBLE APPS ---
+	
+	tell application "System Events"
+		set appNameList to (name of every application process)
+	end tell
+	
+	--log " App List: " &amp; (appNameList as text)
+	
+	set iWin to 0
+	
+	--- LOOP THROUGH EACH APP  ---
+	
+	set logStr to "Left, Top, Width, Height  ┃   App  ┃   WinRole  ┃   Win Title" &amp; LF &amp; LF
+	
+	display notification "Moving all windows to main screen..."
+	
+	repeat with oAppName in appNameList
+		set appName to contents of oAppName
+		
+		-----------------------------------------------------
+		tell application "System Events" to tell application process appName
+			-----------------------------------------------------
+			set winCount to count of windows
+			
+			--display notification " App: " &amp; appName &amp; "   # of Windows: " &amp; winCount
+			
+			repeat with iW from 1 to winCount
+				
+				set oWin to window iW
+				
+				tell oWin
+					set winTitle to title
+					set {winLeft, winTop} to position
+					set {winWidth, winHeight} to size
+					
+					set winBottom to winTop + winHeight
+					
+					if (((winLeft ≥ primaryScreenRight) or ¬
+						(winLeft ≤ primaryScreenLeft))) then
+						
+						set logStr to logStr &amp; my logWin({position &amp; size &amp; space &amp; appName &amp; space &amp; role &amp; space &amp; title}, " ⬅︎⬅︎ ") &amp; LF
+						
+						--- MOVE WINDOW ---
+						
+						set iWin to iWin + 1
+						
+						--- ADD OFFSETS to POSITION ---
+						set newXPos to primaryScreenLeft + (ptyOffsetX * iWin)
+						set newYPos to primaryScreenTop + (ptyOffsetY * iWin)
+						set position of oWin to {newXPos, newYPos}
+						
+						--- MAKE SURE WIN BOTTOM DOES NOT EXCEED SCREEN BOTTOM ---
+						set newBottom to newYPos + winHeight
+						if (newBottom &gt; primaryScreenBottom) then set newBottom to primaryScreenBottom
+						set newHeight to newBottom - newYPos
+						
+						set size of oWin to {winWidth, newHeight}
+					else
+						set logStr to logStr &amp; my logWin({position &amp; size &amp; space &amp; appName &amp; space &amp; role &amp; space &amp; title}, " ") &amp; LF
+						
+					end if
+					
+				end tell
+				
+				
+			end repeat -- on each window
+			
+		end tell -- "System Events" --&gt; appName
+		
+	end repeat -- oAppName in appNameList
+	
+	
+	if (iWin &gt; 0) then
+		set msgStr to (iWin as text) &amp; " Window(s) MOVED"
+	else
+		set msgStr to "NO Windows Were Found to Move."
+	end if
+	
+	set msgTitleStr to ptyScriptName
+	display notification msgStr with title msgTitleStr sound name "Tink.aiff"
+	
+	set scriptResults to "OK" &amp; LF &amp; msgStr &amp; LF &amp; LF &amp; logStr
+	
+	--~~~~~~~~~~~~~ END TRY ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	
+on error errMsg number errNum
+	
+	if errNum = -128 then ## User Canceled
+		set errMsg to "[USER_CANCELED]"
+	end if
+	
+	set scriptResults to "[ERROR]" &amp; return &amp; errMsg &amp; return &amp; return ¬
+		&amp; "SCRIPT: " &amp; ptyScriptName &amp; "   Ver: " &amp; ptyScriptVer &amp; return ¬
+		&amp; "Error Number: " &amp; errNum
+end try
+--~~~~~~~~~~~~~~~~END ON ERROR ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+--- RETURN THE RESULTS TO THE KM EXECUTE SCRIPT ACTION ---
+return scriptResults
+
+--~~~~~~~~~~~~~~~ END OF MAIN SCRIPT ~~~~~~~~~~~~~~~~~~~
+
+on logWin(pListOfProp, pPrefixStr)
+	local logWinStr
+	
+	set astid to AppleScript's text item delimiters
+	
+	set AppleScript's text item delimiters to ", "
+	set logWinStr to pPrefixStr &amp; (pListOfProp as text)
+	set AppleScript's text item delimiters to astid
+	
+	set logWinStr to my changeString(",  ,", "  ┃  ", logWinStr)
+	
+	return logWinStr
+	
+end logWin
+
+on changeString(pSearchForStr, pReplaceWithStr, pSourceStr)
+	local item_list, changedStr, astid
+	
+	set astid to AppleScript's text item delimiters
+	
+	set AppleScript's text item delimiters to the pSearchForStr
+	set the item_list to every text item of pSourceStr
+	set AppleScript's text item delimiters to the pReplaceWithStr
+	set changedStr to the item_list as string
+	set AppleScript's text item delimiters to astid
+	
+	return changedStr
+end changeString</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+						<key>TrimResults</key>
+						<true/>
+						<key>TrimResultsNew</key>
+						<true/>
+						<key>UseText</key>
+						<true/>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>706036863.77395201</real>
+				<key>ModificationDate</key>
+				<real>706037156.17730105</real>
+				<key>Name</key>
+				<string>Move All Windows to Main Screen</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>MacroTriggerType</key>
+						<string>Subroutine</string>
+						<key>Parameters</key>
+						<array/>
+						<key>ReturnsValue</key>
+						<false/>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>86CDA609-84E9-419D-A5C3-9B0CAB43E682</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>System Utilities</string>
+		<key>ToggleMacroUID</key>
+		<string>7804E813-A496-4B80-9475-57A50BCAE4E1</string>
+		<key>UID</key>
+		<string>BF8173F7-D84A-44DF-A8D5-DD22EF4A8F42</string>
+	</dict>
+</array>
+</plist>

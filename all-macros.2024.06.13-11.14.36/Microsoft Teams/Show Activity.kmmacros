@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>733853864.56751895</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>ActionUID</key>
+						<integer>826572</integer>
+						<key>KeyCode</key>
+						<integer>18</integer>
+						<key>MacroActionType</key>
+						<string>SimulateKeystroke</string>
+						<key>Modifiers</key>
+						<integer>256</integer>
+						<key>ReleaseAll</key>
+						<false/>
+						<key>TargetApplication</key>
+						<dict/>
+						<key>TargetingType</key>
+						<string>Front</string>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>733853883.15770996</real>
+				<key>ModificationDate</key>
+				<real>734458020.94806802</real>
+				<key>Name</key>
+				<string>Show Activity</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>FireType</key>
+						<string>Pressed</string>
+						<key>KeyCode</key>
+						<integer>46</integer>
+						<key>MacroTriggerType</key>
+						<string>HotKey</string>
+						<key>Modifiers</key>
+						<integer>768</integer>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>3A6D9DA8-3CC4-411E-AD94-05FF7FE3962D</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Microsoft Teams</string>
+		<key>Targeting</key>
+		<dict>
+			<key>Targeting</key>
+			<string>Included</string>
+			<key>TargetingApps</key>
+			<array>
+				<dict>
+					<key>BundleIdentifier</key>
+					<string>com.microsoft.teams2</string>
+					<key>Name</key>
+					<string>Microsoft Teams (work or school)</string>
+					<key>NewFile</key>
+					<string>/Applications/Microsoft Teams.app</string>
+				</dict>
+			</array>
+		</dict>
+		<key>ToggleMacroUID</key>
+		<string>7C207429-452A-4DD9-A39F-2E8E8892038C</string>
+		<key>UID</key>
+		<string>D155BCD3-36C1-4CA1-929A-39A7BAA7DE87</string>
+	</dict>
+</array>
+</plist>

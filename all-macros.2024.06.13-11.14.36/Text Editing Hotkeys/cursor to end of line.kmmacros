@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>662928075.62198102</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>ActionUID</key>
+						<integer>1161</integer>
+						<key>KeyCode</key>
+						<integer>124</integer>
+						<key>MacroActionType</key>
+						<string>SimulateKeystroke</string>
+						<key>Modifiers</key>
+						<integer>196864</integer>
+						<key>ReleaseAll</key>
+						<false/>
+						<key>TargetApplication</key>
+						<dict/>
+						<key>TargetingType</key>
+						<string>Front</string>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>662928089.96519697</real>
+				<key>ModificationDate</key>
+				<real>662928178.981318</real>
+				<key>Name</key>
+				<string>cursor to end of line</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>FireType</key>
+						<string>Pressed</string>
+						<key>KeyCode</key>
+						<integer>14</integer>
+						<key>MacroTriggerType</key>
+						<string>HotKey</string>
+						<key>Modifiers</key>
+						<integer>4096</integer>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>965AB028-0D57-4755-ACAF-BB32F8147958</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Text Editing Hotkeys</string>
+		<key>Targeting</key>
+		<dict>
+			<key>Targeting</key>
+			<string>Included</string>
+			<key>TargetingApps</key>
+			<array>
+				<dict>
+					<key>BundleIdentifier</key>
+					<string>com.omnigroup.OmniFocus3.MacAppStore</string>
+					<key>Name</key>
+					<string>OmniFocus</string>
+					<key>NewFile</key>
+					<string>/Applications/OmniFocus.localized/OmniFocus.app</string>
+				</dict>
+				<dict>
+					<key>BundleIdentifier</key>
+					<string>org.xmind.cathy.application</string>
+					<key>Name</key>
+					<string>XMind</string>
+					<key>NewFile</key>
+					<string>/Applications/XMind.app</string>
+				</dict>
+				<dict>
+					<key>BundleIdentifier</key>
+					<string>com.tinyspeck.slackmacgap</string>
+					<key>Name</key>
+					<string>Slack</string>
+					<key>NewFile</key>
+					<string>/Applications/Slack.app</string>
+				</dict>
+				<dict>
+					<key>BundleIdentifier</key>
+					<string>com.google.Chrome</string>
+					<key>Name</key>
+					<string>Google Chrome</string>
+					<key>NewFile</key>
+					<string>/Applications/Google Chrome.app</string>
+				</dict>
+				<dict>
+					<key>BundleIdentifier</key>
+					<string>com.microsoft.Outlook</string>
+					<key>Name</key>
+					<string>Microsoft Outlook</string>
+					<key>NewFile</key>
+					<string>/Applications/Microsoft Outlook.app</string>
+				</dict>
+				<dict>
+					<key>BundleIdentifier</key>
+					<string>md.obsidian</string>
+					<key>Name</key>
+					<string>Obsidian</string>
+					<key>NewFile</key>
+					<string>/Applications/Obsidian.app</string>
+				</dict>
+				<dict>
+					<key>BundleIdentifier</key>
+					<string>com.microsoft.teams2</string>
+					<key>Name</key>
+					<string>Microsoft Teams (work or school)</string>
+					<key>NewFile</key>
+					<string>/Applications/Microsoft Teams.app</string>
+				</dict>
+			</array>
+		</dict>
+		<key>ToggleMacroUID</key>
+		<string>A5CDBB90-7F61-4AE5-8E1B-5E06D607ECA1</string>
+		<key>UID</key>
+		<string>083A279D-54C5-40BD-9E8D-D23FF198769C</string>
+	</dict>
+</array>
+</plist>

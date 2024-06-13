@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>696545967.96796405</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>ActionUID</key>
+						<integer>825722</integer>
+						<key>AllWindows</key>
+						<true/>
+						<key>AlreadyActivatedActionType</key>
+						<string>Normal</string>
+						<key>Application</key>
+						<dict>
+							<key>BundleIdentifier</key>
+							<string>com.tinyspeck.slackmacgap</string>
+							<key>Name</key>
+							<string>Slack</string>
+							<key>NewFile</key>
+							<string>/Applications/Slack.app</string>
+						</dict>
+						<key>MacroActionType</key>
+						<string>ActivateApplication</string>
+						<key>ReopenWindows</key>
+						<false/>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>719943357.089324</real>
+				<key>ModificationDate</key>
+				<real>733679710.33306599</real>
+				<key>Name</key>
+				<string>Open Slack</string>
+				<key>Triggers</key>
+				<array/>
+				<key>UID</key>
+				<string>D6969D6C-4885-4FF8-9DF8-5AD64F55783C</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Application Shortcuts</string>
+		<key>ToggleMacroUID</key>
+		<string>335A2DC8-7FE1-4757-ACDE-4E6E238C7B20</string>
+		<key>UID</key>
+		<string>EAE993BC-A8E5-498F-84FD-A06B191EF76B</string>
+	</dict>
+</array>
+</plist>

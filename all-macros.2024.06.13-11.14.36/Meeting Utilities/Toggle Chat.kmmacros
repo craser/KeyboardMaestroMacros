@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>692731909.62910402</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>ActionUID</key>
+						<integer>815452</integer>
+						<key>CaseEntries</key>
+						<array>
+							<dict>
+								<key>Actions</key>
+								<array>
+									<dict>
+										<key>ActionUID</key>
+										<integer>815453</integer>
+										<key>KeyCode</key>
+										<integer>8</integer>
+										<key>MacroActionType</key>
+										<string>SimulateKeystroke</string>
+										<key>Modifiers</key>
+										<integer>4352</integer>
+										<key>ReleaseAll</key>
+										<false/>
+										<key>TargetApplication</key>
+										<dict/>
+										<key>TargetingType</key>
+										<string>Front</string>
+									</dict>
+								</array>
+								<key>ConditionType</key>
+								<string>Contains</string>
+								<key>TestValue</key>
+								<string>Google Chrome</string>
+							</dict>
+							<dict>
+								<key>Actions</key>
+								<array>
+									<dict>
+										<key>ActionUID</key>
+										<integer>815454</integer>
+										<key>MacroActionType</key>
+										<string>Notification</string>
+										<key>SoundName</key>
+										<string></string>
+										<key>Subtitle</key>
+										<string>No Meeting Hotkey</string>
+										<key>Text</key>
+										<string>No meeting hotkey defined for %Application%1%</string>
+										<key>Title</key>
+										<string>%ExecutingMacro%</string>
+									</dict>
+								</array>
+								<key>ConditionType</key>
+								<string>Otherwise</string>
+								<key>TestValue</key>
+								<string></string>
+							</dict>
+						</array>
+						<key>MacroActionType</key>
+						<string>Switch</string>
+						<key>Source</key>
+						<string>Text</string>
+						<key>Text</key>
+						<string>%Application%1%</string>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>692731980.50319397</real>
+				<key>ModificationDate</key>
+				<real>694720968.73142099</real>
+				<key>Name</key>
+				<string>Toggle Chat</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>FireType</key>
+						<string>Pressed</string>
+						<key>KeyCode</key>
+						<integer>17</integer>
+						<key>MacroTriggerType</key>
+						<string>HotKey</string>
+						<key>Modifiers</key>
+						<integer>2048</integer>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>7B3A5A8A-846C-42AE-AD8C-1CCE9DE1B51E</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Meeting Utilities</string>
+		<key>Targeting</key>
+		<dict>
+			<key>Targeting</key>
+			<string>Included</string>
+			<key>TargetingApps</key>
+			<array>
+				<dict>
+					<key>BundleIdentifier</key>
+					<string>com.microsoft.teams</string>
+					<key>Name</key>
+					<string>Microsoft Teams</string>
+					<key>NewFile</key>
+					<string>/Applications/Microsoft Teams classic.app</string>
+				</dict>
+				<dict>
+					<key>BundleIdentifier</key>
+					<string>com.google.Chrome</string>
+					<key>Name</key>
+					<string>Google Chrome</string>
+					<key>NewFile</key>
+					<string>/Applications/Google Chrome.app</string>
+				</dict>
+				<dict>
+					<key>BundleIdentifier</key>
+					<string>com.tinyspeck.slackmacgap</string>
+					<key>Name</key>
+					<string>Slack</string>
+					<key>NewFile</key>
+					<string>/Applications/Slack.app</string>
+				</dict>
+				<dict>
+					<key>BundleIdentifier</key>
+					<string>Cisco-Systems.Spark</string>
+					<key>Name</key>
+					<string>Webex</string>
+					<key>NewFile</key>
+					<string>/Applications/Webex.app</string>
+				</dict>
+				<dict>
+					<key>BundleIdentifier</key>
+					<string>com.webex.meetingmanager</string>
+					<key>Name</key>
+					<string>Cisco Webex Meetings</string>
+					<key>NewFile</key>
+					<string>~/Library/Application Support/WebEx Folder/T33_64UMC_43.6.2.5/Meeting Center.app</string>
+				</dict>
+			</array>
+		</dict>
+		<key>ToggleMacroUID</key>
+		<string>A38B49F0-B140-4486-B273-78A55EDA6582</string>
+		<key>UID</key>
+		<string>A10F37E2-56ED-48E7-A3D3-AB3AF0AA8DCC</string>
+	</dict>
+</array>
+</plist>

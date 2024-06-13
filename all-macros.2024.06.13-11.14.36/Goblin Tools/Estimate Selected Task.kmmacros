@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>728852791.22104001</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>Action</key>
+						<string>Copy</string>
+						<key>ActionUID</key>
+						<integer>826168</integer>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>CutCopyPaste</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>826170</integer>
+						<key>MacroActionType</key>
+						<string>SetVariableToText</string>
+						<key>Text</key>
+						<string>%SystemClipboard%</string>
+						<key>Variable</key>
+						<string>Task</string>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>826171</integer>
+						<key>MacroActionType</key>
+						<string>ExecuteSubroutine</string>
+						<key>MacroUID</key>
+						<string>708374D7-F264-48A9-8EE0-45D2F890E770</string>
+						<key>Parameters</key>
+						<array>
+							<string>%Variable%Task%</string>
+							<string>2</string>
+						</array>
+						<key>ResultVariable</key>
+						<string>TaskEstimateMinutes</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>Action</key>
+						<string>DisplayBriefly</string>
+						<key>ActionUID</key>
+						<integer>826172</integer>
+						<key>MacroActionType</key>
+						<string>InsertText</string>
+						<key>Text</key>
+						<string>final estimate: %Variable%TaskEstimateMinutes%</string>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>728853008.843611</real>
+				<key>ModificationDate</key>
+				<real>728853333.26170802</real>
+				<key>Name</key>
+				<string>Estimate Selected Task</string>
+				<key>Triggers</key>
+				<array/>
+				<key>UID</key>
+				<string>AC0594B5-098D-4FC8-AC65-4D0D29779747</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Goblin Tools</string>
+		<key>ToggleMacroUID</key>
+		<string>B0735DEC-AB88-4AA2-A315-85F296A78F61</string>
+		<key>UID</key>
+		<string>5A644DD0-06C7-4A39-9640-019FE9326B19</string>
+	</dict>
+</array>
+</plist>

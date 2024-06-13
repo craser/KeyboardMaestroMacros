@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>657154187.54435599</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>ActionUID</key>
+						<integer>807204</integer>
+						<key>Actions</key>
+						<array>
+							<dict>
+								<key>ActionUID</key>
+								<integer>807203</integer>
+								<key>IsDisclosed</key>
+								<false/>
+								<key>MacroActionType</key>
+								<string>SystemAction</string>
+								<key>SystemAction</key>
+								<string>DecreaseBrightness</string>
+							</dict>
+						</array>
+						<key>CountExpression</key>
+						<string>16</string>
+						<key>MacroActionType</key>
+						<string>Repeat</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>807205</integer>
+						<key>Actions</key>
+						<array>
+							<dict>
+								<key>ActionUID</key>
+								<integer>9507</integer>
+								<key>IsDisclosed</key>
+								<false/>
+								<key>MacroActionType</key>
+								<string>SystemAction</string>
+								<key>SystemAction</key>
+								<string>IncreaseBrightness</string>
+							</dict>
+						</array>
+						<key>CountExpression</key>
+						<string>13</string>
+						<key>MacroActionType</key>
+						<string>Repeat</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>684786122.88236701</real>
+				<key>ModificationDate</key>
+				<real>684786515.56628895</real>
+				<key>Name</key>
+				<string>Set Brightness</string>
+				<key>Triggers</key>
+				<array/>
+				<key>UID</key>
+				<string>FBB89884-ACB1-417E-B680-4B961BC75253</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>System Utilities</string>
+		<key>ToggleMacroUID</key>
+		<string>7804E813-A496-4B80-9475-57A50BCAE4E1</string>
+		<key>UID</key>
+		<string>BF8173F7-D84A-44DF-A8D5-DD22EF4A8F42</string>
+	</dict>
+</array>
+</plist>

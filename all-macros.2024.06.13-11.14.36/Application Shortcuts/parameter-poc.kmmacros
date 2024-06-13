@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>696545967.96796405</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>ActionUID</key>
+						<integer>827757</integer>
+						<key>Buttons</key>
+						<array>
+							<dict>
+								<key>Button</key>
+								<string>OK</string>
+							</dict>
+							<dict>
+								<key>Button</key>
+								<string>Cancel</string>
+								<key>Cancel</key>
+								<true/>
+							</dict>
+						</array>
+						<key>MacroActionType</key>
+						<string>PromptForUserInput</string>
+						<key>Prompt</key>
+						<string></string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+						<key>Title</key>
+						<string>String</string>
+						<key>Variables</key>
+						<array>
+							<dict>
+								<key>Default</key>
+								<string></string>
+								<key>Type</key>
+								<string>Automatic</string>
+								<key>Variable</key>
+								<string>Arg Value</string>
+							</dict>
+						</array>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>827756</integer>
+						<key>MacroActionType</key>
+						<string>Notification</string>
+						<key>SoundName</key>
+						<string></string>
+						<key>Subtitle</key>
+						<string></string>
+						<key>Text</key>
+						<string>%Arg Value%</string>
+						<key>Title</key>
+						<string>%ExecutingMacro%</string>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>739299407.949072</real>
+				<key>ModificationDate</key>
+				<real>739313357.01184595</real>
+				<key>Name</key>
+				<string>parameter-poc</string>
+				<key>Triggers</key>
+				<array/>
+				<key>UID</key>
+				<string>93ADD575-6B0E-4044-837B-F97802BC4347</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Application Shortcuts</string>
+		<key>ToggleMacroUID</key>
+		<string>335A2DC8-7FE1-4757-ACDE-4E6E238C7B20</string>
+		<key>UID</key>
+		<string>EAE993BC-A8E5-498F-84FD-A06B191EF76B</string>
+	</dict>
+</array>
+</plist>

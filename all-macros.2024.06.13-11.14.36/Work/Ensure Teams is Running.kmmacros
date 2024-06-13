@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>705518536.30104399</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>ActionUID</key>
+						<integer>820803</integer>
+						<key>Conditions</key>
+						<dict>
+							<key>ConditionList</key>
+							<array>
+								<dict>
+									<key>Application</key>
+									<dict>
+										<key>BundleIdentifier</key>
+										<string>com.microsoft.teams2</string>
+										<key>Name</key>
+										<string>Microsoft Teams (work or school)</string>
+										<key>NewFile</key>
+										<string>/Applications/Microsoft Teams.app</string>
+									</dict>
+									<key>ApplicationConditionType</key>
+									<string>NotRunning</string>
+									<key>ConditionType</key>
+									<string>Application</string>
+								</dict>
+							</array>
+							<key>ConditionListMatch</key>
+							<string>All</string>
+						</dict>
+						<key>ElseActions</key>
+						<array/>
+						<key>MacroActionType</key>
+						<string>IfThenElse</string>
+						<key>ThenActions</key>
+						<array>
+							<dict>
+								<key>ActionUID</key>
+								<integer>820804</integer>
+								<key>AllWindows</key>
+								<true/>
+								<key>AlreadyActivatedActionType</key>
+								<string>Normal</string>
+								<key>Application</key>
+								<dict>
+									<key>BundleIdentifier</key>
+									<string>com.microsoft.teams2</string>
+									<key>Name</key>
+									<string>Microsoft Teams (work or school)</string>
+									<key>NewFile</key>
+									<string>/Applications/Microsoft Teams.app</string>
+								</dict>
+								<key>MacroActionType</key>
+								<string>ActivateApplication</string>
+								<key>ReopenWindows</key>
+								<true/>
+								<key>TimeOutAbortsMacro</key>
+								<true/>
+							</dict>
+						</array>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>705518540.04588902</real>
+				<key>ModificationDate</key>
+				<real>721164343.16066206</real>
+				<key>Name</key>
+				<string>Ensure Teams is Running</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>ExecuteType</key>
+						<string>While</string>
+						<key>MacroTriggerType</key>
+						<string>Time</string>
+						<key>RepeatTime</key>
+						<integer>300</integer>
+						<key>TimeFinishHour</key>
+						<integer>23</integer>
+						<key>TimeFinishMinutes</key>
+						<integer>59</integer>
+						<key>TimeHour</key>
+						<integer>0</integer>
+						<key>TimeMinutes</key>
+						<integer>0</integer>
+						<key>WhichDays</key>
+						<integer>127</integer>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>4B3AC103-8331-4F70-B9D2-D0082F07955B</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Work</string>
+		<key>ToggleMacroUID</key>
+		<string>F44043A4-2366-4F8B-934C-66F8B3CB786D</string>
+		<key>UID</key>
+		<string>20B7BA54-34FC-438A-BA78-497AB7A040D5</string>
+	</dict>
+</array>
+</plist>
