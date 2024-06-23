@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>665101599.77857304</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array/>
+				<key>CreationDate</key>
+				<real>665101612.12143302</real>
+				<key>ModificationDate</key>
+				<real>665101649.02810097</real>
+				<key>Name</key>
+				<string>Disable PGUP</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>FireType</key>
+						<string>Pressed</string>
+						<key>KeyCode</key>
+						<integer>116</integer>
+						<key>MacroTriggerType</key>
+						<string>HotKey</string>
+						<key>Modifiers</key>
+						<integer>0</integer>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>088AD137-616A-416E-9BFB-E00174451464</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Global Keymapping</string>
+		<key>ToggleMacroUID</key>
+		<string>EBE3B2C9-B80D-4125-ACE1-F604DDFC4D7D</string>
+		<key>UID</key>
+		<string>87466F84-148C-445D-A252-9AEA173FFDE5</string>
+	</dict>
+</array>
+</plist>

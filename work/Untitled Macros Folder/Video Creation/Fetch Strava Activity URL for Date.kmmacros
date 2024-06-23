@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>694509407.60938394</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>ActionUID</key>
+						<integer>817464</integer>
+						<key>DisplayKind</key>
+						<string>Variable</string>
+						<key>HonourFailureSettings</key>
+						<true/>
+						<key>IncludeStdErr</key>
+						<false/>
+						<key>IncludedVariables</key>
+						<array>
+							<string>9999</string>
+						</array>
+						<key>MacroActionType</key>
+						<string>ExecuteJavaScriptForAutomation</string>
+						<key>Path</key>
+						<string></string>
+						<key>Text</key>
+						<string>(function () {
+    /**
+     * Get the ActivityDate variable from Keyboard Maestro
+     *   - this CAN be anything matching the regex below
+     *   - USUALLY it's a file path.
+     *
+     */
+    let kme = Application('Keyboard Maestro Engine');
+    let date = kme.getvariable('ActivityDate');
+    let re = /(?&lt;year&gt;\d{4})-(?&lt;month&gt;\d{2})-(?&lt;day&gt;\d{2})/; // sample: 2023-01-28
+
+
+    const MONTHS = [
+        'Jan',
+        'Feb',
+        'Mar',
+        'Apr',
+        'May',
+        'Jun',
+        'Jul',
+        'Aug',
+        'Sep',
+        'Oct',
+        'Nov',
+        'Dec'
+    ];
+    let match = date.match(re);
+    if (match) {
+        let year = match.groups.year;
+        let month = MONTHS[parseInt(match.groups.month) - 1];
+        // sample URL: https://www.strava.com/athlete/calendar/2022#Dec
+        let url = `https://www.strava.com/athlete/calendar/${year}#${month}`
+        return url;
+    } else {
+        return null;
+    }
+}());
+</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+						<key>TrimResults</key>
+						<true/>
+						<key>TrimResultsNew</key>
+						<true/>
+						<key>UseModernSyntax</key>
+						<false/>
+						<key>UseText</key>
+						<true/>
+						<key>Variable</key>
+						<string>CalendarUrl</string>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>817465</integer>
+						<key>MacroActionType</key>
+						<string>Log</string>
+						<key>Text</key>
+						<string>Strava URL: %Variable%CalendarUrl%</string>
+					</dict>
+					<dict>
+						<key>Action</key>
+						<string>IgnoreCaseRegEx</string>
+						<key>ActionUID</key>
+						<integer>817471</integer>
+						<key>Destination</key>
+						<string>Variable</string>
+						<key>DestinationVariable</key>
+						<string>ActivityDay</string>
+						<key>MacroActionType</key>
+						<string>SearchReplace</string>
+						<key>Replace</key>
+						<string>$1</string>
+						<key>Search</key>
+						<string>^.*\d{4}-\d{2}-(\d{2}).*$</string>
+						<key>Source</key>
+						<string>Variable</string>
+						<key>Variable</key>
+						<string>ActivityDate</string>
+						<key>Which</key>
+						<string>All</string>
+					</dict>
+					<dict>
+						<key>Action</key>
+						<string>TrimWhitespace</string>
+						<key>ActionUID</key>
+						<integer>817474</integer>
+						<key>MacroActionType</key>
+						<string>Filter</string>
+						<key>Source</key>
+						<string>Variable</string>
+						<key>Variable</key>
+						<string>ActivityDay</string>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>817472</integer>
+						<key>MacroActionType</key>
+						<string>Log</string>
+						<key>Text</key>
+						<string>ActivityDay: %Variable%ActivityDay%</string>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>817469</integer>
+						<key>Actions</key>
+						<array>
+							<dict>
+								<key>ActionUID</key>
+								<integer>817466</integer>
+								<key>IsDefaultApplication</key>
+								<true/>
+								<key>MacroActionType</key>
+								<string>OpenURL</string>
+								<key>TimeOutAbortsMacro</key>
+								<true/>
+								<key>URL</key>
+								<string>%Variable%CalendarUrl%</string>
+							</dict>
+							<dict>
+								<key>ActionUID</key>
+								<integer>817468</integer>
+								<key>Argument</key>
+								<string>3</string>
+								<key>Command</key>
+								<string>WaitForComplete</string>
+								<key>MacroActionType</key>
+								<string>SafariControl</string>
+								<key>TimeOutAbortsMacro</key>
+								<true/>
+								<key>WebBrowser</key>
+								<string>Front Browser</string>
+							</dict>
+							<dict>
+								<key>ActionUID</key>
+								<integer>817467</integer>
+								<key>DisplayKind</key>
+								<string>Variable</string>
+								<key>HonourFailureSettings</key>
+								<true/>
+								<key>IncludeStdErr</key>
+								<false/>
+								<key>IncludedVariables</key>
+								<array>
+									<string>9999</string>
+								</array>
+								<key>MacroActionType</key>
+								<string>ExecuteJavaScript</string>
+								<key>Path</key>
+								<string></string>
+								<key>Text</key>
+								<string>(function () {
+    let day = document.kmvar.ActivityDay; // date in month, 1-31
+    let calendar = document.getElementsByClassName('month-calendar')[0];
+    let allDays = calendar.getElementsByTagName('td');
+    let activeDays = [];
+    for (let d of allDays) {
+        if (!d.classList.contains('disabled')) {
+            activeDays.push(d);
+        }
+    }
+    let targetDay = activeDays[parseInt(day) - 1];
+    let url = targetDay.getElementsByTagName('a')[0].href
+    return url;
+}());</string>
+								<key>TimeOutAbortsMacro</key>
+								<true/>
+								<key>TrimResults</key>
+								<true/>
+								<key>TrimResultsNew</key>
+								<true/>
+								<key>UseModernSyntax</key>
+								<false/>
+								<key>UseText</key>
+								<true/>
+								<key>Variable</key>
+								<string>ActivityUrl</string>
+								<key>WebBrowser</key>
+								<string>Front Browser</string>
+							</dict>
+							<dict>
+								<key>ActionUID</key>
+								<integer>817476</integer>
+								<key>MacroActionType</key>
+								<string>Log</string>
+								<key>Text</key>
+								<string>ActivityUrl: %Variable%ActivityUrl%</string>
+							</dict>
+						</array>
+						<key>MacroActionType</key>
+						<string>Group</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>817475</integer>
+						<key>MacroActionType</key>
+						<string>Return</string>
+						<key>Text</key>
+						<string>%Variable%ActivityUrl%</string>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>696818568.11173701</real>
+				<key>ModificationDate</key>
+				<real>696843308.18032706</real>
+				<key>Name</key>
+				<string>Fetch Strava Activity URL for Date</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>MacroTriggerType</key>
+						<string>Subroutine</string>
+						<key>Parameters</key>
+						<array>
+							<string>ActivityDate</string>
+						</array>
+						<key>ReturnsValue</key>
+						<true/>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>E3D9BA67-87CE-4ED8-93EF-FD6EBACCE896</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Video Creation</string>
+		<key>ToggleMacroUID</key>
+		<string>0C0E9783-F2F7-4BF0-9D10-6E5A703C5BE2</string>
+		<key>UID</key>
+		<string>077915D4-EA09-4606-9E4E-C92D6BBB3AD5</string>
+	</dict>
+</array>
+</plist>

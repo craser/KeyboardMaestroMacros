@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>670365908.59332502</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>ActionUID</key>
+						<integer>827758</integer>
+						<key>DisplayKind</key>
+						<string>Variable</string>
+						<key>HonourFailureSettings</key>
+						<true/>
+						<key>IncludeStdErr</key>
+						<false/>
+						<key>IncludedVariables</key>
+						<array>
+							<string>9999</string>
+						</array>
+						<key>MacroActionType</key>
+						<string>ExecuteJavaScript</string>
+						<key>Path</key>
+						<string></string>
+						<key>Text</key>
+						<string>return (function () {
+	try {
+		let json = localStorage.getItem('abba-scenario');
+		let { jiraId, scenarioId, scenarioName } = JSON.parse(json);
+		return `${scenarioId}|${jiraId}`;
+	} catch (e) {}
+})();</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+						<key>TrimResults</key>
+						<true/>
+						<key>TrimResultsNew</key>
+						<true/>
+						<key>UseModernSyntax</key>
+						<true/>
+						<key>UseText</key>
+						<true/>
+						<key>Variable</key>
+						<string>ScenarioID</string>
+						<key>WebBrowser</key>
+						<string>Front Browser</string>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>827763</integer>
+						<key>KeyCode</key>
+						<integer>0</integer>
+						<key>MacroActionType</key>
+						<string>SimulateKeystroke</string>
+						<key>Modifiers</key>
+						<integer>256</integer>
+						<key>ReleaseAll</key>
+						<false/>
+						<key>TargetApplication</key>
+						<dict/>
+						<key>TargetingType</key>
+						<string>Front</string>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>827764</integer>
+						<key>KeyCode</key>
+						<integer>51</integer>
+						<key>MacroActionType</key>
+						<string>SimulateKeystroke</string>
+						<key>Modifiers</key>
+						<integer>0</integer>
+						<key>ReleaseAll</key>
+						<false/>
+						<key>TargetApplication</key>
+						<dict/>
+						<key>TargetingType</key>
+						<string>Front</string>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>827760</integer>
+						<key>DisplayKind</key>
+						<string>Pasting</string>
+						<key>HonourFailureSettings</key>
+						<true/>
+						<key>IncludeStdErr</key>
+						<false/>
+						<key>IncludedVariables</key>
+						<array>
+							<string>9999</string>
+						</array>
+						<key>MacroActionType</key>
+						<string>ExecuteShellScript</string>
+						<key>Path</key>
+						<string></string>
+						<key>Source</key>
+						<string>Variable</string>
+						<key>SourceVariable</key>
+						<string>ScenarioID</string>
+						<key>Text</key>
+						<string>scenario=$(echo "$KMVAR_ScenarioID" | sed 's/\|.*$//')
+jira_id=$(echo "$KMVAR_ScenarioID" | sed 's/^.*\|//')
+
+$HOME/bin/underarmour/wkd-snippet-copy "$scenario" "$jira_id"</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+						<key>TrimResults</key>
+						<true/>
+						<key>TrimResultsNew</key>
+						<true/>
+						<key>UseText</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>828558</integer>
+						<key>KeyCode</key>
+						<integer>126</integer>
+						<key>MacroActionType</key>
+						<string>SimulateKeystroke</string>
+						<key>Modifiers</key>
+						<integer>196864</integer>
+						<key>ReleaseAll</key>
+						<false/>
+						<key>TargetApplication</key>
+						<dict/>
+						<key>TargetingType</key>
+						<string>Front</string>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>739921002.61377597</real>
+				<key>ModificationDate</key>
+				<real>740677581.06564105</real>
+				<key>Name</key>
+				<string>ABBA Inject Current Scenario</string>
+				<key>Triggers</key>
+				<array/>
+				<key>UID</key>
+				<string>71BD2D6F-430F-4BB9-81E5-96C008D85394</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Chrome Macros</string>
+		<key>Targeting</key>
+		<dict>
+			<key>Targeting</key>
+			<string>Included</string>
+			<key>TargetingApps</key>
+			<array>
+				<dict>
+					<key>BundleIdentifier</key>
+					<string>com.google.Chrome</string>
+					<key>Name</key>
+					<string>Google Chrome</string>
+					<key>NewFile</key>
+					<string>/Applications/Google Chrome.app</string>
+				</dict>
+			</array>
+		</dict>
+		<key>ToggleMacroUID</key>
+		<string>3FA34196-57E7-4528-B5FD-025C68AED69E</string>
+		<key>UID</key>
+		<string>0C407766-8DED-4CD7-914C-44B156BD9149</string>
+	</dict>
+</array>
+</plist>

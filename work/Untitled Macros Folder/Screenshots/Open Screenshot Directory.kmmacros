@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>691960069.17446804</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>ActionUID</key>
+						<integer>810641</integer>
+						<key>IsDefaultApplication</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>Open1File</string>
+						<key>Path</key>
+						<string>~/Pictures/Screenshots</string>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>691962498.63865495</real>
+				<key>ModificationDate</key>
+				<real>691962539.64142704</real>
+				<key>Name</key>
+				<string>Open Screenshot Directory</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>FireType</key>
+						<string>Pressed</string>
+						<key>KeyCode</key>
+						<integer>23</integer>
+						<key>MacroTriggerType</key>
+						<string>HotKey</string>
+						<key>Modifiers</key>
+						<integer>4864</integer>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>DEBDCA45-E95B-4DED-BA6A-912E9027E18F</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Screenshots</string>
+		<key>ToggleMacroUID</key>
+		<string>793A8FAB-356F-4C2A-AAE1-37322019F770</string>
+		<key>UID</key>
+		<string>F1854D5B-A110-4A2B-812C-38BFB1CDA649</string>
+	</dict>
+</array>
+</plist>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>693791275.72015095</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>ActionUID</key>
+						<integer>812182</integer>
+						<key>KeyCode</key>
+						<integer>18</integer>
+						<key>MacroActionType</key>
+						<string>SimulateKeystroke</string>
+						<key>Modifiers</key>
+						<integer>4096</integer>
+						<key>ReleaseAll</key>
+						<false/>
+						<key>TargetApplication</key>
+						<dict/>
+						<key>TargetingType</key>
+						<string>Front</string>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>693857566.36200404</real>
+				<key>ModificationDate</key>
+				<real>693857629.28254104</real>
+				<key>Name</key>
+				<string>Open Monitor Tab</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>FireType</key>
+						<string>Pressed</string>
+						<key>KeyCode</key>
+						<integer>18</integer>
+						<key>MacroTriggerType</key>
+						<string>HotKey</string>
+						<key>Modifiers</key>
+						<integer>256</integer>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>BC376B00-1FBE-4003-A6C1-683CC458C457</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>ThinkOrSwim</string>
+		<key>Targeting</key>
+		<dict>
+			<key>Targeting</key>
+			<string>Included</string>
+			<key>TargetingApps</key>
+			<array>
+				<dict>
+					<key>BundleIdentifier</key>
+					<string>com.install4j.9968-4488-2169-7623.18</string>
+					<key>Name</key>
+					<string>thinkorswim</string>
+				</dict>
+				<dict>
+					<key>BundleIdentifier</key>
+					<string>com.sublimetext.4</string>
+					<key>Name</key>
+					<string>Sublime Text</string>
+					<key>NewFile</key>
+					<string>/Applications/Sublime Text.app</string>
+				</dict>
+				<dict>
+					<key>BundleIdentifier</key>
+					<string>md.obsidian</string>
+					<key>Name</key>
+					<string>Obsidian</string>
+					<key>NewFile</key>
+					<string>/Applications/Obsidian.app</string>
+				</dict>
+			</array>
+		</dict>
+		<key>ToggleMacroUID</key>
+		<string>FFF11D3B-6119-485C-B610-0C062E87E00B</string>
+		<key>UID</key>
+		<string>2A52914B-82D5-4AC8-ACA2-641E70CCAFBC</string>
+	</dict>
+</array>
+</plist>

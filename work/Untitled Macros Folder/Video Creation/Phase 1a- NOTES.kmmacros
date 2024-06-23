@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>694509407.60938394</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>ActionUID</key>
+						<integer>817454</integer>
+						<key>MacroActionType</key>
+						<string>ExecuteSubroutine</string>
+						<key>MacroUID</key>
+						<string>08AEAEF8-FF5A-4D68-9B8A-D73A4D5BE496</string>
+						<key>Parameters</key>
+						<array/>
+						<key>ResultVariable</key>
+						<string>SourceDirectory</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>817456</integer>
+						<key>MacroActionType</key>
+						<string>Notification</string>
+						<key>SoundName</key>
+						<string></string>
+						<key>Subtitle</key>
+						<string></string>
+						<key>Text</key>
+						<string>%Variable%SourceDirectory%</string>
+						<key>Title</key>
+						<string>%ExecutingMacro%</string>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>817455</integer>
+						<key>MacroActionType</key>
+						<string>ExecuteSubroutine</string>
+						<key>MacroUID</key>
+						<string>E3D9BA67-87CE-4ED8-93EF-FD6EBACCE896</string>
+						<key>Parameters</key>
+						<array>
+							<string>%Variable%SourceDirectory%</string>
+						</array>
+						<key>ResultVariable</key>
+						<string>ActivityUrl</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>817477</integer>
+						<key>MacroActionType</key>
+						<string>Log</string>
+						<key>Text</key>
+						<string>Final ActivityUrl: %Variable%ActivityUrl%</string>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>817478</integer>
+						<key>MacroActionType</key>
+						<string>SetVariableToText</string>
+						<key>Text</key>
+						<string>2021 Over the Hump #4, on August 10, 2021 at Irvine Lake, CA. 
+ 
+Commentary Video: [[TODO]]
+Over the Hump: https://raceoc.com/ 
+Official Results: [[TODO]]
+Strava: %Variable%ActivityUrl%</string>
+						<key>Variable</key>
+						<string>ActivityNotes</string>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>817479</integer>
+						<key>MacroActionType</key>
+						<string>Log</string>
+						<key>Text</key>
+						<string>notes: %Variable%ActivityNotes%</string>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>696818838.179775</real>
+				<key>ModificationDate</key>
+				<real>696842682.78250897</real>
+				<key>Name</key>
+				<string>Phase 1a: NOTES</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>FireType</key>
+						<string>Pressed</string>
+						<key>KeyCode</key>
+						<integer>98</integer>
+						<key>MacroTriggerType</key>
+						<string>HotKey</string>
+						<key>Modifiers</key>
+						<integer>256</integer>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>1501A861-8406-4F9E-98D2-2AAC9AB1CAC2</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Video Creation</string>
+		<key>ToggleMacroUID</key>
+		<string>0C0E9783-F2F7-4BF0-9D10-6E5A703C5BE2</string>
+		<key>UID</key>
+		<string>077915D4-EA09-4606-9E4E-C92D6BBB3AD5</string>
+	</dict>
+</array>
+</plist>

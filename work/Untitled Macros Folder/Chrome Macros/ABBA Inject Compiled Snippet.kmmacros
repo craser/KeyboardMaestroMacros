@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>670365908.59332502</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>ActionUID</key>
+						<integer>823454</integer>
+						<key>MacroActionType</key>
+						<string>Notification</string>
+						<key>SoundName</key>
+						<string></string>
+						<key>Subtitle</key>
+						<string>Finding snippet %Variable%snippetIndicator%...</string>
+						<key>Text</key>
+						<string></string>
+						<key>Title</key>
+						<string>%ExecutingMacro%</string>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>823450</integer>
+						<key>DisplayKind</key>
+						<string>Variable</string>
+						<key>HonourFailureSettings</key>
+						<true/>
+						<key>IncludeStdErr</key>
+						<false/>
+						<key>IncludedVariables</key>
+						<array>
+							<string>9999</string>
+						</array>
+						<key>MacroActionType</key>
+						<string>ExecuteShellScript</string>
+						<key>Path</key>
+						<string></string>
+						<key>Source</key>
+						<string>Nothing</string>
+						<key>Text</key>
+						<string>indicator="$KMVAR_snipIndicator"
+$HOME/bin/underarmour/wkd-snippet-copy $indicator # copies compiled snipped to system clipboard</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+						<key>TrimResults</key>
+						<true/>
+						<key>TrimResultsNew</key>
+						<true/>
+						<key>UseText</key>
+						<true/>
+						<key>Variable</key>
+						<string>snippet</string>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>823456</integer>
+						<key>MacroActionType</key>
+						<string>SetVariableToText</string>
+						<key>Text</key>
+						<string>&lt;html&gt;
+&lt;body&gt;
+%Variable%snippet%
+&lt;/body&gt;
+&lt;/html&gt;
+
+</string>
+						<key>Variable</key>
+						<string>injectableHtml</string>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>824583</integer>
+						<key>MacroActionType</key>
+						<string>Notification</string>
+						<key>SoundName</key>
+						<string></string>
+						<key>Subtitle</key>
+						<string>Found snippet %Variable%snippetIndicator%. Injecting...</string>
+						<key>Text</key>
+						<string></string>
+						<key>Title</key>
+						<string>%ExecutingMacro%</string>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>823452</integer>
+						<key>DisplayKind</key>
+						<string>None</string>
+						<key>HonourFailureSettings</key>
+						<true/>
+						<key>IncludeStdErr</key>
+						<false/>
+						<key>IncludedVariables</key>
+						<array>
+							<string>9999</string>
+						</array>
+						<key>MacroActionType</key>
+						<string>ExecuteJavaScript</string>
+						<key>Path</key>
+						<string></string>
+						<key>Text</key>
+						<string>/**
+ * Originally built to streamline the ECT loop for Under Armour.
+ * Expects the HTML to be a fragment with two tags: &lt;style&gt; &amp; &lt;script&gt;.
+ *
+ */
+(function () {
+    function getParsedStyleJs(html) {
+        let doc = new DOMParser().parseFromString(html, 'text/html');
+        let style = doc.querySelector('body &gt; style');
+        let styleText = style ? style.innerText : undefined;
+        let styleClasses = style ? [...style.classList] : undefined;
+
+        let script = doc.querySelector('body &gt; script');
+        let jsText = script ? script.innerText : undefined;
+        let jsClasses = script ? [...script.classList] : undefined;
+
+        return { styleText, styleClasses, jsText, jsClasses };
+    }
+
+    function injectStyleJs({ styleText, styleClasses, jsText, jsClasses }) {
+        let body = document.querySelector('body');
+        let container = document.createElement('div');
+        container.classList.add('km-injected');
+        body.appendChild(container);
+
+        if (styleText) {
+            let style = document.createElement('style');
+            style.innerHTML = styleText;
+            style.classList = styleClasses;
+            container.appendChild(style);
+        } else {
+            console.warn('No style text found in injectable HTML');
+        }
+
+        if (jsText) {
+            let script = document.createElement('script');
+            script.innerHTML = jsText;
+            script.classList = jsClasses;
+            container.appendChild(script);
+        } else {
+            console.warn('No script text found in injectable HTML');
+        }
+    }
+
+    try {
+        let html = document.kmvar.injectableHtml;
+        injectStyleJs(getParsedStyleJs(html));
+        //alert('Team ABBA Test Code injected');
+    } catch (e) {
+        alert('Error injecting Team ABBA Test Code');
+        console.error({ message: 'Error injecting Team ABBA Test Code', error: e });
+    }
+}());
+</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+						<key>TrimResults</key>
+						<true/>
+						<key>TrimResultsNew</key>
+						<true/>
+						<key>UseModernSyntax</key>
+						<false/>
+						<key>UseText</key>
+						<true/>
+						<key>WebBrowser</key>
+						<string>Front Browser</string>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>824584</integer>
+						<key>MacroActionType</key>
+						<string>Notification</string>
+						<key>SoundName</key>
+						<string></string>
+						<key>Subtitle</key>
+						<string>Snippet %Variable%snippetIndicator% injected.</string>
+						<key>Text</key>
+						<string></string>
+						<key>Title</key>
+						<string>%ExecutingMacro%</string>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>716426724.73290598</real>
+				<key>ModificationDate</key>
+				<real>719518998.43319595</real>
+				<key>Name</key>
+				<string>ABBA Inject Compiled Snippet</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>MacroTriggerType</key>
+						<string>Subroutine</string>
+						<key>Parameters</key>
+						<array>
+							<string>snipIndicator</string>
+						</array>
+						<key>ReturnsValue</key>
+						<false/>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>56CFD269-521E-4BBD-9B8D-C4AB0B2D7E5A</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Chrome Macros</string>
+		<key>Targeting</key>
+		<dict>
+			<key>Targeting</key>
+			<string>Included</string>
+			<key>TargetingApps</key>
+			<array>
+				<dict>
+					<key>BundleIdentifier</key>
+					<string>com.google.Chrome</string>
+					<key>Name</key>
+					<string>Google Chrome</string>
+					<key>NewFile</key>
+					<string>/Applications/Google Chrome.app</string>
+				</dict>
+			</array>
+		</dict>
+		<key>ToggleMacroUID</key>
+		<string>3FA34196-57E7-4528-B5FD-025C68AED69E</string>
+		<key>UID</key>
+		<string>0C407766-8DED-4CD7-914C-44B156BD9149</string>
+	</dict>
+</array>
+</plist>

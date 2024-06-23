@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>696545967.96796405</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>ActionUID</key>
+						<integer>823073</integer>
+						<key>MacroActionType</key>
+						<string>ExecuteSubroutine</string>
+						<key>MacroUID</key>
+						<string>FE7C9BF7-E43A-468D-AFCA-5D89EFF53DB7</string>
+						<key>Parameters</key>
+						<array>
+							<string>Google Chrome</string>
+							<string>/adobe target/i</string>
+							<string>https://experience.adobe.com/#/@underarmourinc/target/activities</string>
+							<string>/experience\.adobe\.com/</string>
+						</array>
+						<key>ResultVariable</key>
+						<string>VarName</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>713314853.08820105</real>
+				<key>ModificationDate</key>
+				<real>719182666.34302604</real>
+				<key>Name</key>
+				<string>Open Adobe Target</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>FireType</key>
+						<string>Pressed</string>
+						<key>KeyCode</key>
+						<integer>0</integer>
+						<key>MacroTriggerType</key>
+						<string>HotKey</string>
+						<key>Modifiers</key>
+						<integer>4864</integer>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>0DA6CE15-CCA8-4E9E-8C7E-41396EBDA250</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Application Shortcuts</string>
+		<key>ToggleMacroUID</key>
+		<string>335A2DC8-7FE1-4757-ACDE-4E6E238C7B20</string>
+		<key>UID</key>
+		<string>EAE993BC-A8E5-498F-84FD-A06B191EF76B</string>
+	</dict>
+</array>
+</plist>
