@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>740538907.87438405</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>ActionUID</key>
+						<integer>828212</integer>
+						<key>Destination</key>
+						<string>Variable</string>
+						<key>DestinationVariable</key>
+						<string>LatestIDE</string>
+						<key>MacroActionType</key>
+						<string>PromptWithList</string>
+						<key>PromptUID</key>
+						<string>7AC52C6C-8B36-4C4B-A19D-1473CEE4FE90</string>
+						<key>Source</key>
+						<string>Text</string>
+						<key>Text</key>
+						<string>WebStorm
+IntelliJ</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+						<key>WindowTitle</key>
+						<string>Open IDE</string>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>828215</integer>
+						<key>Asynchronously</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>ExecuteMacro</string>
+						<key>MacroUID</key>
+						<string>11A158D8-4D5E-4537-B753-03A6DBC79838</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+						<key>UseParameter</key>
+						<false/>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>740540644.61811197</real>
+				<key>ModificationDate</key>
+				<real>740540795.56971598</real>
+				<key>Name</key>
+				<string>Prompt to Open IDE</string>
+				<key>Triggers</key>
+				<array/>
+				<key>UID</key>
+				<string>05E42CDE-9DC1-4DEC-A599-B4D5A6D396A0</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>IDE Switcher</string>
+		<key>ToggleMacroUID</key>
+		<string>07BCA203-2718-4642-B1FD-AF116D5ADEA9</string>
+		<key>UID</key>
+		<string>4312C657-FED2-45C8-A71B-C273094D95C1</string>
+	</dict>
+</array>
+</plist>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>740538907.87438405</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>ActionUID</key>
+						<integer>828173</integer>
+						<key>MacroActionType</key>
+						<string>SetVariableToText</string>
+						<key>Text</key>
+						<string>%Application%1%</string>
+						<key>Variable</key>
+						<string>LatestIDE</string>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>740538942.14166105</real>
+				<key>ModificationDate</key>
+				<real>740539081.76627898</real>
+				<key>Name</key>
+				<string>Note Most Recent IDE</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>Application</key>
+						<dict>
+							<key>BundleIdentifier</key>
+							<string>com.jetbrains.WebStorm</string>
+							<key>Name</key>
+							<string>WebStorm</string>
+							<key>NewFile</key>
+							<string>/Applications/WebStorm.app</string>
+						</dict>
+						<key>FireType2</key>
+						<string>Activate</string>
+						<key>MacroTriggerType</key>
+						<string>Application</string>
+						<key>RepeatTime</key>
+						<integer>60</integer>
+						<key>Target</key>
+						<string>Specific</string>
+					</dict>
+					<dict>
+						<key>Application</key>
+						<dict>
+							<key>BundleIdentifier</key>
+							<string>com.jetbrains.intellij</string>
+							<key>Name</key>
+							<string>IntelliJ IDEA</string>
+							<key>NewFile</key>
+							<string>/Applications/IntelliJ IDEA.app</string>
+						</dict>
+						<key>FireType2</key>
+						<string>Activate</string>
+						<key>MacroTriggerType</key>
+						<string>Application</string>
+						<key>RepeatTime</key>
+						<integer>60</integer>
+						<key>Target</key>
+						<string>Specific</string>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>5D9D9D54-9C5D-45CC-B420-07DCBEB3ED48</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>IDE Switcher</string>
+		<key>ToggleMacroUID</key>
+		<string>07BCA203-2718-4642-B1FD-AF116D5ADEA9</string>
+		<key>UID</key>
+		<string>4312C657-FED2-45C8-A71B-C273094D95C1</string>
+	</dict>
+</array>
+</plist>

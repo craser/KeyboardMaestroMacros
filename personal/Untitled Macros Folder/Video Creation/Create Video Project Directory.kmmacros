@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>694509407.60938394</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>ActionUID</key>
+						<integer>814831</integer>
+						<key>MacroActionType</key>
+						<string>SetVariableToText</string>
+						<key>Text</key>
+						<string>~/vid/%Variable%VideoName%</string>
+						<key>Variable</key>
+						<string>VideoDir</string>
+					</dict>
+					<dict>
+						<key>Action</key>
+						<string>ExpandTildeInPath</string>
+						<key>ActionUID</key>
+						<integer>814875</integer>
+						<key>MacroActionType</key>
+						<string>Filter</string>
+						<key>Source</key>
+						<string>Variable</string>
+						<key>Variable</key>
+						<string>VideoDir</string>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>814832</integer>
+						<key>Destination</key>
+						<string>%Variable%VideoDir%</string>
+						<key>MacroActionType</key>
+						<string>NewFolder</string>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>814833</integer>
+						<key>MacroActionType</key>
+						<string>Log</string>
+						<key>Text</key>
+						<string>%ExecutingMacro%: created directory "%Variable%VideoDir%"</string>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>814819</integer>
+						<key>MacroActionType</key>
+						<string>Return</string>
+						<key>Text</key>
+						<string>%Variable%VideoDir%</string>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>694928137.05610502</real>
+				<key>ModificationDate</key>
+				<real>694971792.32177901</real>
+				<key>Name</key>
+				<string>Create Video Project Directory</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>MacroTriggerType</key>
+						<string>Subroutine</string>
+						<key>Parameters</key>
+						<array>
+							<string>VideoName</string>
+						</array>
+						<key>ReturnsValue</key>
+						<true/>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>6C2EBA49-0C72-4E7E-B30E-07C4632EA538</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Video Creation</string>
+		<key>ToggleMacroUID</key>
+		<string>0C0E9783-F2F7-4BF0-9D10-6E5A703C5BE2</string>
+		<key>UID</key>
+		<string>077915D4-EA09-4606-9E4E-C92D6BBB3AD5</string>
+	</dict>
+</array>
+</plist>

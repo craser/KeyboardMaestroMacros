@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>657154187.54435599</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array/>
+				<key>CreationDate</key>
+				<real>740557993.69000304</real>
+				<key>ModificationDate</key>
+				<real>740558005.85548401</real>
+				<key>Name</key>
+				<string>Copy Screenshot</string>
+				<key>Triggers</key>
+				<array/>
+				<key>UID</key>
+				<string>14E6291B-7A8D-4F1B-A9FF-5FD9CEC9B87F</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>System Utilities</string>
+		<key>ToggleMacroUID</key>
+		<string>7804E813-A496-4B80-9475-57A50BCAE4E1</string>
+		<key>UID</key>
+		<string>BF8173F7-D84A-44DF-A8D5-DD22EF4A8F42</string>
+	</dict>
+</array>
+</plist>

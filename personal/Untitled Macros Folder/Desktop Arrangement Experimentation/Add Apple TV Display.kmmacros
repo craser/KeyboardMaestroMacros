@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>679080140.31011295</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>ActionUID</key>
+						<integer>826967</integer>
+						<key>AllWindows</key>
+						<true/>
+						<key>AlreadyActivatedActionType</key>
+						<string>Normal</string>
+						<key>Application</key>
+						<dict>
+							<key>BundleIdentifier</key>
+							<string>com.apple.systempreferences</string>
+							<key>Name</key>
+							<string>System Settings</string>
+							<key>NewFile</key>
+							<string>/System/Applications/System Preferences.app</string>
+						</dict>
+						<key>MacroActionType</key>
+						<string>ActivateApplication</string>
+						<key>ReopenWindows</key>
+						<false/>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>826969</integer>
+						<key>MacroActionType</key>
+						<string>SelectMenuItem</string>
+						<key>Menu</key>
+						<array>
+							<string>View</string>
+							<string>Displays</string>
+						</array>
+						<key>TargetApplication</key>
+						<dict/>
+						<key>TargetingType</key>
+						<string>Front</string>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>734650757.37308204</real>
+				<key>ModificationDate</key>
+				<real>734650902.11295497</real>
+				<key>Name</key>
+				<string>Add Apple TV Display</string>
+				<key>Triggers</key>
+				<array/>
+				<key>UID</key>
+				<string>14E6F94C-AAA4-44A6-923F-89CA2DABF7AC</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Desktop Arrangement Experimentation</string>
+		<key>ToggleMacroUID</key>
+		<string>65CD704A-BDBA-46CB-B879-1BD11590635E</string>
+		<key>UID</key>
+		<string>7C979E56-6BF0-423E-BFAB-F7877F9FE434</string>
+	</dict>
+</array>
+</plist>
