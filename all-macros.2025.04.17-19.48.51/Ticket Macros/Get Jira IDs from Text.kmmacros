@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>741656148.91005301</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>ActionUID</key>
+						<integer>830758</integer>
+						<key>DisplayKind</key>
+						<string>Variable</string>
+						<key>HonourFailureSettings</key>
+						<true/>
+						<key>IncludeStdErr</key>
+						<false/>
+						<key>IncludedVariables</key>
+						<array>
+							<string>9999</string>
+						</array>
+						<key>MacroActionType</key>
+						<string>ExecuteShellScript</string>
+						<key>Path</key>
+						<string></string>
+						<key>Source</key>
+						<string>Nothing</string>
+						<key>Text</key>
+						<string>query=$KMVAR_SelectedText
+echo "$query" | egrep -o '\w{2,4}-[0-9]{3,4}' | sort | uniq</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+						<key>TrimResults</key>
+						<true/>
+						<key>TrimResultsNew</key>
+						<true/>
+						<key>UseText</key>
+						<true/>
+						<key>Variable</key>
+						<string>TicketIDs</string>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>830761</integer>
+						<key>MacroActionType</key>
+						<string>Return</string>
+						<key>Text</key>
+						<string>%Variable%TicketIDs%</string>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>741658310.93250895</real>
+				<key>ModificationDate</key>
+				<real>742194713.49980605</real>
+				<key>Name</key>
+				<string>Get Jira IDs from Text</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>MacroTriggerType</key>
+						<string>Subroutine</string>
+						<key>Parameters</key>
+						<array>
+							<string>SelectedText</string>
+						</array>
+						<key>ReturnsValue</key>
+						<true/>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>711FFFF9-2963-451C-8643-0A4FB0A59D6D</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Ticket Macros</string>
+		<key>ToggleMacroUID</key>
+		<string>6955930E-4C5C-43DF-A4F7-8E7C2FEA1349</string>
+		<key>UID</key>
+		<string>19998172-D1FE-4E59-8EA5-2FCC3FDA6FB2</string>
+	</dict>
+</array>
+</plist>

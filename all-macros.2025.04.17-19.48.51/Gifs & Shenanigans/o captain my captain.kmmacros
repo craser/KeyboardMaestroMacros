@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>741112736.91927898</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array/>
+				<key>CreationDate</key>
+				<real>741112748.37331402</real>
+				<key>ModificationDate</key>
+				<real>741112752.22622597</real>
+				<key>Name</key>
+				<string>o captain my captain</string>
+				<key>Triggers</key>
+				<array/>
+				<key>UID</key>
+				<string>9B8D37EF-372D-4287-A77E-CDB8FF28C408</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Gifs &amp; Shenanigans</string>
+		<key>ToggleMacroUID</key>
+		<string>9F799729-AC60-4EEB-8217-03BA67873273</string>
+		<key>UID</key>
+		<string>B14861EF-3FFA-4453-B505-7C3F53D44AB0</string>
+	</dict>
+</array>
+</plist>

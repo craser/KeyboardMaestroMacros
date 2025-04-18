@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>743371598.00417197</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>ActionUID</key>
+						<integer>823832</integer>
+						<key>MacroActionType</key>
+						<string>ExecuteSubroutine</string>
+						<key>MacroUID</key>
+						<string>56CFD269-521E-4BBD-9B8D-C4AB0B2D7E5A</string>
+						<key>Parameters</key>
+						<array>
+							<string>b</string>
+						</array>
+						<key>ResultVariable</key>
+						<string>VarName</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>716495492.463557</real>
+				<key>ModificationDate</key>
+				<real>745186703.01695895</real>
+				<key>Name</key>
+				<string>ABBA Inject Challenger B</string>
+				<key>Triggers</key>
+				<array/>
+				<key>UID</key>
+				<string>E332BE8E-D50D-492B-AF17-EEF013AB58FC</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Team ABBA</string>
+		<key>ToggleMacroUID</key>
+		<string>45801DCA-3C53-477C-B01F-8E7C1ECAC704</string>
+		<key>UID</key>
+		<string>47333596-2996-462D-AEA7-98FBE9B6D97D</string>
+	</dict>
+</array>
+</plist>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>694624205.95947099</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>ActionUID</key>
+						<integer>814334</integer>
+						<key>MacroActionType</key>
+						<string>ExecuteSubroutine</string>
+						<key>MacroUID</key>
+						<string>1C754E50-4142-4D74-8ADA-01413D9ACA3D</string>
+						<key>Parameters</key>
+						<array>
+							<string>I want to be an Air Force Ranger!</string>
+						</array>
+						<key>ResultVariable</key>
+						<string>VarName</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>694624535.59364104</real>
+				<key>ModificationDate</key>
+				<real>694624859.51587498</real>
+				<key>Name</key>
+				<string>parampoc</string>
+				<key>Triggers</key>
+				<array/>
+				<key>UID</key>
+				<string>CF330187-90E2-4101-A355-618CCA8FA884</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Automation Utilities</string>
+		<key>ToggleMacroUID</key>
+		<string>36C4A96B-9EA5-4B6B-9D44-C94CBBEF8495</string>
+		<key>UID</key>
+		<string>D21B199C-44E9-41AB-BD65-512CBED1AA01</string>
+	</dict>
+</array>
+</plist>

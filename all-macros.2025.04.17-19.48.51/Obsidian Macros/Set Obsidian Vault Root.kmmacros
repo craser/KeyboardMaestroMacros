@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>740864496.29313195</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>ActionUID</key>
+						<integer>829551</integer>
+						<key>MacroActionType</key>
+						<string>ExecuteSubroutine</string>
+						<key>MacroUID</key>
+						<string>9003ED69-A6EA-49B9-B9E7-7FEAB75B3561</string>
+						<key>Parameters</key>
+						<array/>
+						<key>ResultVariable</key>
+						<string>ObConfigJSON</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>829556</integer>
+						<key>MacroActionType</key>
+						<string>Log</string>
+						<key>Text</key>
+						<string>Obsidian Config JSON: %Variable%ObConfigJSON%</string>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>829555</integer>
+						<key>MacroActionType</key>
+						<string>Log</string>
+						<key>Text</key>
+						<string>Assigning new root to Obsidian vault "%Variable%vault%": "%Variable%root%"</string>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>829552</integer>
+						<key>DisplayKind</key>
+						<string>Variable</string>
+						<key>HonourFailureSettings</key>
+						<true/>
+						<key>IncludeStdErr</key>
+						<false/>
+						<key>IncludedVariables</key>
+						<array>
+							<string>9999</string>
+						</array>
+						<key>MacroActionType</key>
+						<string>ExecuteJavaScriptForAutomation</string>
+						<key>Path</key>
+						<string></string>
+						<key>Text</key>
+						<string>const json = kmvar.ObConfigJSON
+const config = JSON.parse(json);
+config.derp = 'flim';
+config[kmvar.vault] = kmvar.root;
+return JSON.stringify(config);</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+						<key>TrimResults</key>
+						<true/>
+						<key>TrimResultsNew</key>
+						<true/>
+						<key>UseModernSyntax</key>
+						<true/>
+						<key>UseText</key>
+						<true/>
+						<key>Variable</key>
+						<string>ObConfigJSON</string>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>829553</integer>
+						<key>Append</key>
+						<false/>
+						<key>Destination</key>
+						<string>~/.obsidian.json</string>
+						<key>Encoding</key>
+						<string>UTF8</string>
+						<key>Format</key>
+						<string>PlainText</string>
+						<key>Format2</key>
+						<string>PlainText</string>
+						<key>MacroActionType</key>
+						<string>WriteFile</string>
+						<key>Source</key>
+						<string>Variable</string>
+						<key>Variable</key>
+						<string>ObConfigJSON</string>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>829557</integer>
+						<key>MacroActionType</key>
+						<string>Log</string>
+						<key>Text</key>
+						<string>Updated JSON: %Variable%ObConfigJSON%</string>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>829554</integer>
+						<key>MacroActionType</key>
+						<string>Log</string>
+						<key>Text</key>
+						<string>Wrote new JSON to ~/.obsidian.json</string>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>741245837.32234097</real>
+				<key>ModificationDate</key>
+				<real>741246733.62717605</real>
+				<key>Name</key>
+				<string>Set Obsidian Vault Root</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>MacroTriggerType</key>
+						<string>Subroutine</string>
+						<key>Parameters</key>
+						<array>
+							<string>vault</string>
+							<string>root</string>
+						</array>
+						<key>ReturnsValue</key>
+						<true/>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>2E76DBF3-C654-4B02-9C4D-788CB0FA5C72</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Obsidian Macros</string>
+		<key>ToggleMacroUID</key>
+		<string>7C42226A-774B-4977-BFE1-2F022636D3BB</string>
+		<key>UID</key>
+		<string>2E0841BA-0705-4E2E-9E16-21CBFEB297EE</string>
+	</dict>
+</array>
+</plist>

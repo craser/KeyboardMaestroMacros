@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>741421527.264148</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>ActionUID</key>
+						<integer>831343</integer>
+						<key>DisplayKind</key>
+						<string>None</string>
+						<key>ExecuteOrEdit</key>
+						<string>Execute</string>
+						<key>IncludeStdErr</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>ExecuteShortcut</string>
+						<key>Shortcut</key>
+						<string>Set Focus to Off</string>
+						<key>Source</key>
+						<string>Nothing</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+						<key>TrimResults</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>831348</integer>
+						<key>MacroActionType</key>
+						<string>ExecuteSubroutine</string>
+						<key>MacroUID</key>
+						<string>5E0BB392-BD04-4B6E-A441-2113A28928A3</string>
+						<key>Parameters</key>
+						<array>
+							<string>focus</string>
+						</array>
+						<key>ResultVariable</key>
+						<string>CurrentStatus</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>742515246.25615501</real>
+				<key>ModificationDate</key>
+				<real>742516618.50617301</real>
+				<key>Name</key>
+				<string>Status: Focus</string>
+				<key>Triggers</key>
+				<array/>
+				<key>UID</key>
+				<string>0BA2C771-6289-443E-A768-33AF41A7E4EA</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>On-Air Sign</string>
+		<key>ToggleMacroUID</key>
+		<string>7DCA5B4C-EBD7-45B8-A664-C1607EB8C45D</string>
+		<key>UID</key>
+		<string>4CF31D5F-9006-4865-9F35-5E708AC798E6</string>
+	</dict>
+</array>
+</plist>

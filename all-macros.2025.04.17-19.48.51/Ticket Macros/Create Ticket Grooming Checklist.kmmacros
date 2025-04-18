@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>741656148.91005301</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>ActionUID</key>
+						<integer>831313</integer>
+						<key>MacroActionType</key>
+						<string>ExecuteSubroutine</string>
+						<key>MacroUID</key>
+						<string>BA9232A1-F0CE-4822-B73A-06F48BE614C0</string>
+						<key>Parameters</key>
+						<array>
+							<string>general</string>
+							<string>%TriggerValue%</string>
+						</array>
+						<key>ResultVariable</key>
+						<string>ObURL</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>831316</integer>
+						<key>IsDefaultApplication</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>OpenURL</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+						<key>URL</key>
+						<string>%Variable%ObURL%</string>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>742412026.96440399</real>
+				<key>ModificationDate</key>
+				<real>742412639.105196</real>
+				<key>Name</key>
+				<string>Create Ticket Grooming Checklist</string>
+				<key>Triggers</key>
+				<array/>
+				<key>UID</key>
+				<string>884DD197-0C6B-43A3-9A13-92C68AF52139</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Ticket Macros</string>
+		<key>ToggleMacroUID</key>
+		<string>6955930E-4C5C-43DF-A4F7-8E7C2FEA1349</string>
+		<key>UID</key>
+		<string>19998172-D1FE-4E59-8EA5-2FCC3FDA6FB2</string>
+	</dict>
+</array>
+</plist>

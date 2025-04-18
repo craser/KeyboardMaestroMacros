@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>740864496.29313195</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>ActionName</key>
+						<string>log parameters</string>
+						<key>ActionUID</key>
+						<integer>831292</integer>
+						<key>Actions</key>
+						<array>
+							<dict>
+								<key>ActionUID</key>
+								<integer>831237</integer>
+								<key>MacroActionType</key>
+								<string>Log</string>
+								<key>Text</key>
+								<string>[%ExecutingThisMacro%] vault: %Variable%vault%</string>
+							</dict>
+							<dict>
+								<key>ActionUID</key>
+								<integer>831238</integer>
+								<key>MacroActionType</key>
+								<string>Log</string>
+								<key>Text</key>
+								<string>[%ExecutingThisMacro%] path: %Variable%path%</string>
+							</dict>
+							<dict>
+								<key>ActionUID</key>
+								<integer>831239</integer>
+								<key>MacroActionType</key>
+								<string>Log</string>
+								<key>Text</key>
+								<string>[%ExecutingThisMacro%] templatePath: %Variable%templatePath%</string>
+							</dict>
+							<dict>
+								<key>ActionUID</key>
+								<integer>831303</integer>
+								<key>MacroActionType</key>
+								<string>Log</string>
+								<key>Text</key>
+								<string>[%ExecutingThisMacro%] valuesJson: %Variable%valuesJson%</string>
+							</dict>
+						</array>
+						<key>MacroActionType</key>
+						<string>Group</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>ActionName</key>
+						<string>Get path to template</string>
+						<key>ActionUID</key>
+						<integer>830354</integer>
+						<key>MacroActionType</key>
+						<string>ExecuteSubroutine</string>
+						<key>MacroUID</key>
+						<string>397658E2-EAF9-457B-9151-46EECD01D94E</string>
+						<key>Parameters</key>
+						<array>
+							<string>%Variable%vault%</string>
+							<string>%Variable%templatePath%</string>
+						</array>
+						<key>ResultVariable</key>
+						<string>TemplateFile</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>ActionName</key>
+						<string>log parameters</string>
+						<key>ActionUID</key>
+						<integer>831293</integer>
+						<key>Actions</key>
+						<array>
+							<dict>
+								<key>ActionUID</key>
+								<integer>831294</integer>
+								<key>MacroActionType</key>
+								<string>Log</string>
+								<key>Text</key>
+								<string>[%ExecutingThisMacro%] (again) vault: %Variable%vault%</string>
+							</dict>
+							<dict>
+								<key>ActionUID</key>
+								<integer>831295</integer>
+								<key>MacroActionType</key>
+								<string>Log</string>
+								<key>Text</key>
+								<string>[%ExecutingThisMacro%] (again) path: %Variable%path%</string>
+							</dict>
+							<dict>
+								<key>ActionUID</key>
+								<integer>831296</integer>
+								<key>MacroActionType</key>
+								<string>Log</string>
+								<key>Text</key>
+								<string>[%ExecutingThisMacro%] (again) templatePath: %Variable%templatePath%</string>
+							</dict>
+							<dict>
+								<key>ActionUID</key>
+								<integer>831304</integer>
+								<key>MacroActionType</key>
+								<string>Log</string>
+								<key>Text</key>
+								<string>[%ExecutingThisMacro%] (again) valuesJson: %Variable%valuesJson%</string>
+							</dict>
+						</array>
+						<key>MacroActionType</key>
+						<string>Group</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>831297</integer>
+						<key>MacroActionType</key>
+						<string>Log</string>
+						<key>Text</key>
+						<string>[%ExecutingThisMacro%] getting contents of %Variable%TemplateFile%</string>
+					</dict>
+					<dict>
+						<key>ActionName</key>
+						<string>Grab contents of template</string>
+						<key>ActionUID</key>
+						<integer>830356</integer>
+						<key>Destination</key>
+						<string>Variable</string>
+						<key>MacroActionType</key>
+						<string>ReadFile</string>
+						<key>Source</key>
+						<string>%Variable%TemplateFile%</string>
+						<key>Variable</key>
+						<string>TemplateText</string>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>831298</integer>
+						<key>MacroActionType</key>
+						<string>Log</string>
+						<key>Text</key>
+						<string>[%ExecutingThisMacro%] got contents of %Variable%TemplateFile%</string>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>831299</integer>
+						<key>MacroActionType</key>
+						<string>Log</string>
+						<key>Text</key>
+						<string>[%ExecutingThisMacro%] text: %Variable%TemplateText%</string>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>831305</integer>
+						<key>MacroActionType</key>
+						<string>ExecuteSubroutine</string>
+						<key>MacroUID</key>
+						<string>88653CD1-5D4C-428C-817F-51CD0D21C9B4</string>
+						<key>Parameters</key>
+						<array>
+							<string>%Variable%TemplateText%</string>
+							<string>%Variable%valuesJson%</string>
+						</array>
+						<key>ResultVariable</key>
+						<string>TemplateText</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>831306</integer>
+						<key>MacroActionType</key>
+						<string>Log</string>
+						<key>Text</key>
+						<string>[%ExecutingThisMacro%] text: %Variable%TemplateText%</string>
+					</dict>
+					<dict>
+						<key>ActionName</key>
+						<string>Write the template text to the new file &amp; get the URL</string>
+						<key>ActionUID</key>
+						<integer>830357</integer>
+						<key>MacroActionType</key>
+						<string>ExecuteSubroutine</string>
+						<key>MacroUID</key>
+						<string>F822CA5D-BCE5-4BC1-B3EB-A77CEA04C87D</string>
+						<key>Parameters</key>
+						<array>
+							<string>%Variable%vault%</string>
+							<string>%Variable%path%</string>
+							<string>%Variable%TemplateText%</string>
+						</array>
+						<key>ResultVariable</key>
+						<string>ObURL</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>ActionName</key>
+						<string>Open the new file via Obsidian URL</string>
+						<key>ActionUID</key>
+						<integer>830353</integer>
+						<key>MacroActionType</key>
+						<string>Return</string>
+						<key>Text</key>
+						<string>%Variable%ObURL%</string>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>741638355.03605103</real>
+				<key>ModificationDate</key>
+				<real>742329540.43154705</real>
+				<key>Name</key>
+				<string>Create Obsidian File from Template: (vault, path, template, valuesJson) ➤ url</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>MacroTriggerType</key>
+						<string>Subroutine</string>
+						<key>Parameters</key>
+						<array>
+							<string>vault</string>
+							<string>path</string>
+							<string>templatePath</string>
+							<string>valuesJson</string>
+						</array>
+						<key>ReturnsValue</key>
+						<true/>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>E61D9620-3EC0-48C3-B016-0778A2E1176A</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Obsidian Macros</string>
+		<key>ToggleMacroUID</key>
+		<string>7C42226A-774B-4977-BFE1-2F022636D3BB</string>
+		<key>UID</key>
+		<string>2E0841BA-0705-4E2E-9E16-21CBFEB297EE</string>
+	</dict>
+</array>
+</plist>

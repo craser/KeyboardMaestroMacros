@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>744852222.39280498</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>ActionUID</key>
+						<integer>833946</integer>
+						<key>MacroActionType</key>
+						<string>Log</string>
+						<key>Text</key>
+						<string>[%ExecutingThisMacro%] Writing snippet file to ~/%Variable%SnippetFile%</string>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>833959</integer>
+						<key>MacroActionType</key>
+						<string>SetVariableToText</string>
+						<key>Text</key>
+						<string>~/.snippet-stash/%Variable%SnippetFile%</string>
+						<key>Variable</key>
+						<string>local_SnippetFile</string>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>833947</integer>
+						<key>Append</key>
+						<false/>
+						<key>Destination</key>
+						<string>%Variable%local_SnippetFile%</string>
+						<key>Encoding</key>
+						<string>UTF8</string>
+						<key>Format</key>
+						<string>PlainText</string>
+						<key>Format2</key>
+						<string>PlainText</string>
+						<key>MacroActionType</key>
+						<string>WriteFile</string>
+						<key>Source</key>
+						<string>Variable</string>
+						<key>Variable</key>
+						<string>SnippetText</string>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>833960</integer>
+						<key>MacroActionType</key>
+						<string>Return</string>
+						<key>Text</key>
+						<string>%Variable%local_SnippetFile%</string>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>745534186.06762803</real>
+				<key>ModificationDate</key>
+				<real>745540656.931669</real>
+				<key>Name</key>
+				<string>Write Snippet File</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>MacroTriggerType</key>
+						<string>Subroutine</string>
+						<key>Parameters</key>
+						<array>
+							<string>SnippetText</string>
+							<string>SnippetFile</string>
+						</array>
+						<key>ReturnsValue</key>
+						<true/>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>2B14AE3F-8EB0-4EE7-B449-68F137073AD0</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Snippet Stash</string>
+		<key>ToggleMacroUID</key>
+		<string>8C342E7C-C614-42AF-A93A-0F31535A90CB</string>
+		<key>UID</key>
+		<string>122EC607-1FF7-411A-8AA9-7C44EA923503</string>
+	</dict>
+</array>
+</plist>

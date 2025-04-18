@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>745276117.00069904</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array/>
+				<key>CreationDate</key>
+				<real>745276152.23596394</real>
+				<key>ModificationDate</key>
+				<real>745276154.16727698</real>
+				<key>Name</key>
+				<string>testing</string>
+				<key>Triggers</key>
+				<array/>
+				<key>UID</key>
+				<string>C242E655-720D-48A2-8C3E-2D9AA9E4A3EC</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Public Macros - Called from Stream Deck, Alfred, etc.</string>
+		<key>ToggleMacroUID</key>
+		<string>20A49304-18B4-4F8C-BEF8-9E81290D8CED</string>
+		<key>UID</key>
+		<string>F856538C-788B-4563-A41A-F7BDCED75AA2</string>
+	</dict>
+</array>
+</plist>

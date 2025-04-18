@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>743371598.00417197</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>ActionUID</key>
+						<integer>831352</integer>
+						<key>DisplayKind</key>
+						<string>None</string>
+						<key>HonourFailureSettings</key>
+						<true/>
+						<key>IncludeStdErr</key>
+						<false/>
+						<key>IncludedVariables</key>
+						<array>
+							<string>9999</string>
+						</array>
+						<key>MacroActionType</key>
+						<string>ExecuteJavaScript</string>
+						<key>Path</key>
+						<string></string>
+						<key>Text</key>
+						<string>/**
+ * NOTE: this does NOT clear the cookies named in SKIP_COOKIES.
+ */
+const SKIP_COOKIES = [
+    'mboxDisable'
+];
+
+function clearCookies() {
+    // Get all cookies for the current domain
+    const cookies = document.cookie.split(";");
+    cookies.forEach(cookie =&gt; {
+        const cookieName = cookie.split("=")[0].trim();
+        if (SKIP_COOKIES.includes(cookieName)) {
+            return;
+        } else {
+            // Set the cookie's expiration date to a past date
+            document.cookie = `${cookieName}=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/`;
+        }
+    });
+}
+
+// Clear everything
+clearCookies();</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+						<key>TrimResults</key>
+						<true/>
+						<key>TrimResultsNew</key>
+						<true/>
+						<key>UseModernSyntax</key>
+						<true/>
+						<key>UseText</key>
+						<true/>
+						<key>WebBrowser</key>
+						<string>Front Browser</string>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>831354</integer>
+						<key>MacroActionType</key>
+						<string>Pause</string>
+						<key>Time</key>
+						<string>0.5</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>831355</integer>
+						<key>KeyCode</key>
+						<integer>15</integer>
+						<key>MacroActionType</key>
+						<string>SimulateKeystroke</string>
+						<key>Modifiers</key>
+						<integer>256</integer>
+						<key>ReleaseAll</key>
+						<false/>
+						<key>TargetApplication</key>
+						<dict/>
+						<key>TargetingType</key>
+						<string>Front</string>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>831353</integer>
+						<key>MacroActionType</key>
+						<string>Notification</string>
+						<key>SoundName</key>
+						<string></string>
+						<key>Subtitle</key>
+						<string></string>
+						<key>Text</key>
+						<string>Cleared cookies.</string>
+						<key>Title</key>
+						<string>%ExecutingMacro%</string>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>742756025.98485005</real>
+				<key>ModificationDate</key>
+				<real>744057182.32028401</real>
+				<key>Name</key>
+				<string>Clear All Cookies for Current Page</string>
+				<key>Triggers</key>
+				<array/>
+				<key>UID</key>
+				<string>A4D94DAD-3FB6-4280-959D-9C8FC77C1005</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Team ABBA</string>
+		<key>ToggleMacroUID</key>
+		<string>45801DCA-3C53-477C-B01F-8E7C1ECAC704</string>
+		<key>UID</key>
+		<string>47333596-2996-462D-AEA7-98FBE9B6D97D</string>
+	</dict>
+</array>
+</plist>

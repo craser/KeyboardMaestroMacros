@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>728852791.22104001</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>ActionUID</key>
+						<integer>826174</integer>
+						<key>IsActive</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>Notification</string>
+						<key>SoundName</key>
+						<string></string>
+						<key>Subtitle</key>
+						<string></string>
+						<key>Text</key>
+						<string>task: %Variable%Task%
+spiciness: %Variable%Spiciness%</string>
+						<key>Title</key>
+						<string>%ExecutingMacro%</string>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>826164</integer>
+						<key>DisplayKind</key>
+						<string>Variable</string>
+						<key>HonourFailureSettings</key>
+						<true/>
+						<key>IncludeStdErr</key>
+						<false/>
+						<key>IncludedVariables</key>
+						<array>
+							<string>9999</string>
+						</array>
+						<key>MacroActionType</key>
+						<string>ExecuteShellScript</string>
+						<key>Path</key>
+						<string></string>
+						<key>Source</key>
+						<string>Nothing</string>
+						<key>Text</key>
+						<string>#!/bin/bash
+task="$KMVAR_Task"
+spiciness="$KMVAR_Spiciness"
+format="long"
+
+while getopts "lms:" opt; do
+    case "${opt}" in
+        l)                                          # case-insensitive
+            format="long"
+            ;;
+        m)
+            format="minutes"
+            ;;
+        s)
+            spiciness="${OPTARG}"
+            ;;
+    esac
+done
+shift $((OPTIND-1))             # Strip off the already-parse arguments.
+
+if [ -z "$task" ]; then
+  task="clean the bathroom"
+fi
+
+estimateTask() {
+    task="$1"
+    spiciness="$2"
+    curl 'https://goblin.tools/api/Estimator' \
+      --silent \
+      -H 'Accept: */*' \
+      -H 'Accept-Language: en-US,en;q=0.9' \
+      -H 'Connection: keep-alive' \
+      -H 'Content-Type: application/json' \
+      -H 'Origin: https://goblin.tools' \
+      -H 'Referer: https://goblin.tools/Estimator' \
+      -H 'Sec-Fetch-Dest: empty' \
+      -H 'Sec-Fetch-Mode: cors' \
+      -H 'Sec-Fetch-Site: same-origin' \
+      -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36' \
+      -H 'X-Requested-With: XMLHttpRequest' \
+      -H 'sec-ch-ua: "Not A(Brand";v="99", "Google Chrome";v="121", "Chromium";v="121"' \
+      -H 'sec-ch-ua-mobile: ?0' \
+      -H 'sec-ch-ua-platform: "macOS"' \
+      --data-raw "{\"Text\":\"$task, in minutes\",\"Spiciness\":\"$spiciness\"}" \
+      --compressed
+}
+
+formatEstimate() {
+    estimate="$1"
+    format="$2"
+    if [ "$format" = "long" ]; then
+        echo "$estimate"
+    else
+        echo "$estimate" | egrep -o "\d*" | tail -1
+    fi
+}
+
+
+estimate=`estimateTask "$task" "$spiciness"`
+minutes=`formatEstimate "$estimate" "$format"`
+echo "$minutes"</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+						<key>TrimResults</key>
+						<true/>
+						<key>TrimResultsNew</key>
+						<true/>
+						<key>UseText</key>
+						<true/>
+						<key>Variable</key>
+						<string>TaskEstimate </string>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>826179</integer>
+						<key>DisplayKind</key>
+						<string>Variable</string>
+						<key>HonourFailureSettings</key>
+						<true/>
+						<key>IncludeStdErr</key>
+						<false/>
+						<key>IncludedVariables</key>
+						<array>
+							<string>9999</string>
+						</array>
+						<key>MacroActionType</key>
+						<string>ExecuteShellScript</string>
+						<key>Path</key>
+						<string></string>
+						<key>Source</key>
+						<string>Nothing</string>
+						<key>Text</key>
+						<string>#!/bin/bash
+
+formatEstimate() {
+    estimate="$1"
+    format="$2"
+    if [ "$format" = "long" ]; then
+        echo "$estimate"
+    else
+        echo "$estimate" | egrep -o "\d*" | tail -1
+    fi
+}
+
+minutes=`formatEstimate "$KMVAR_TaskEstimate" "minutes"`
+echo "$minutes"</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+						<key>TrimResults</key>
+						<true/>
+						<key>TrimResultsNew</key>
+						<true/>
+						<key>UseText</key>
+						<true/>
+						<key>Variable</key>
+						<string>TaskEstimateMinutes</string>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>826173</integer>
+						<key>IsActive</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>Notification</string>
+						<key>SoundName</key>
+						<string></string>
+						<key>Subtitle</key>
+						<string></string>
+						<key>Text</key>
+						<string>task: %Variable%Task%
+spiciness: %Variable%Spiciness%
+estimate: %Variable%TaskEstimate%
+minutes: %Variable%TaskEstimateMinutes%</string>
+						<key>Title</key>
+						<string>%ExecutingMacro%</string>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>826167</integer>
+						<key>MacroActionType</key>
+						<string>Return</string>
+						<key>Text</key>
+						<string>%Variable%TaskEstimateMinutes%</string>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>728852800.07355499</real>
+				<key>ModificationDate</key>
+				<real>728854741.74898505</real>
+				<key>Name</key>
+				<string>Estimator</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>MacroTriggerType</key>
+						<string>Subroutine</string>
+						<key>Parameters</key>
+						<array>
+							<string>Task</string>
+							<string>Spiciness</string>
+						</array>
+						<key>ReturnsValue</key>
+						<true/>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>708374D7-F264-48A9-8EE0-45D2F890E770</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Goblin Tools</string>
+		<key>ToggleMacroUID</key>
+		<string>B0735DEC-AB88-4AA2-A315-85F296A78F61</string>
+		<key>UID</key>
+		<string>5A644DD0-06C7-4A39-9640-019FE9326B19</string>
+	</dict>
+</array>
+</plist>

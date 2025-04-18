@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>742148210.69860899</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>ActionUID</key>
+						<integer>830769</integer>
+						<key>MacroActionType</key>
+						<string>ExecuteSubroutine</string>
+						<key>MacroUID</key>
+						<string>FE7C9BF7-E43A-468D-AFCA-5D89EFF53DB7</string>
+						<key>Parameters</key>
+						<array>
+							<string>Google Chrome</string>
+							<string>/ChatGPT/i</string>
+							<string>https://chatgpt.com/</string>
+							<string>/chatgpt\.com/</string>
+							<string>false</string>
+							<string></string>
+						</array>
+						<key>ResultVariable</key>
+						<string>VarName</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>699210550.43345201</real>
+				<key>ModificationDate</key>
+				<real>741478655.05198002</real>
+				<key>Name</key>
+				<string>Open GPT</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>FireType</key>
+						<string>Pressed</string>
+						<key>KeyCode</key>
+						<integer>16</integer>
+						<key>MacroTriggerType</key>
+						<string>HotKey</string>
+						<key>Modifiers</key>
+						<integer>4864</integer>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>645A66CD-E5B1-4B8A-BDA2-6527D8735EA3</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Application Shortcuts</string>
+		<key>ToggleMacroUID</key>
+		<string>10DE2223-E18E-463E-91E6-669A6F973E5F</string>
+		<key>UID</key>
+		<string>BC2C98A7-9664-4489-BC7C-8DA6D13C06CA</string>
+	</dict>
+</array>
+</plist>

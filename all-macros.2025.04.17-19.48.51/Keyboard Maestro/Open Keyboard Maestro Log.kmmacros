@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>694571366.97565198</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>ActionUID</key>
+						<integer>833129</integer>
+						<key>IsDefaultApplication</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>Open1File</string>
+						<key>Path</key>
+						<string>/Users/craser/Library/Logs/Keyboard Maestro/Engine.log</string>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>745174239.44627404</real>
+				<key>ModificationDate</key>
+				<real>745174256.53416395</real>
+				<key>Name</key>
+				<string>Open Keyboard Maestro Log</string>
+				<key>Triggers</key>
+				<array/>
+				<key>UID</key>
+				<string>CF0CDCC0-1DF8-414F-9AA7-4683C614CD6F</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Keyboard Maestro</string>
+		<key>Targeting</key>
+		<dict>
+			<key>Targeting</key>
+			<string>Included</string>
+			<key>TargetingApps</key>
+			<array>
+				<dict>
+					<key>BundleIdentifier</key>
+					<string>com.stairways.keyboardmaestro.editor</string>
+					<key>Name</key>
+					<string>Keyboard Maestro</string>
+					<key>NewFile</key>
+					<string>/Applications/Keyboard Maestro.app</string>
+				</dict>
+			</array>
+		</dict>
+		<key>ToggleMacroUID</key>
+		<string>64B29592-8969-48E5-B0FA-71F8305EEEDD</string>
+		<key>UID</key>
+		<string>5484023F-730A-49E1-8419-61FC660CBA07</string>
+	</dict>
+</array>
+</plist>

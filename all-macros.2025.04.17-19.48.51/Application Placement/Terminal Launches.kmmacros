@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>684367756.331056</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>Action</key>
+						<string>MoveAndResize</string>
+						<key>ActionUID</key>
+						<integer>9131</integer>
+						<key>HeightExpression</key>
+						<string>SCREENVISIBLE(Main,Height)</string>
+						<key>HorizontalExpression</key>
+						<string>SCREENVISIBLE(Main,Left)</string>
+						<key>MacroActionType</key>
+						<string>ManipulateWindow</string>
+						<key>TargetApplication</key>
+						<dict/>
+						<key>Targeting</key>
+						<string>FrontWindow</string>
+						<key>TargetingType</key>
+						<string>Front</string>
+						<key>VerticalExpression</key>
+						<string>SCREENVISIBLE(Main,Top)</string>
+						<key>WidthExpression</key>
+						<string>SCREENVISIBLE(Main,Width)</string>
+						<key>WindowIndexExpression</key>
+						<string>2</string>
+						<key>WindowName</key>
+						<string></string>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>684368017.44804299</real>
+				<key>ModificationDate</key>
+				<real>684368063.45159197</real>
+				<key>Name</key>
+				<string>Terminal Launches</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>Application</key>
+						<dict>
+							<key>BundleIdentifier</key>
+							<string>com.apple.Terminal</string>
+							<key>Name</key>
+							<string>Terminal</string>
+							<key>NewFile</key>
+							<string>/System/Applications/Utilities/Terminal.app</string>
+						</dict>
+						<key>FireType2</key>
+						<string>Launch</string>
+						<key>MacroTriggerType</key>
+						<string>Application</string>
+						<key>RepeatTime</key>
+						<integer>60</integer>
+						<key>Target</key>
+						<string>Specific</string>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>A95D3A9A-055D-49A6-95C8-C43CF0079E06</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Application Placement</string>
+		<key>ToggleMacroUID</key>
+		<string>E5DBA816-9BD2-4D67-800C-801BB227D8CA</string>
+		<key>UID</key>
+		<string>B40A3925-4EE2-47D4-B5C5-4CC24A1EDC06</string>
+	</dict>
+</array>
+</plist>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>742494581.74555302</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>ActionUID</key>
+						<integer>834754</integer>
+						<key>Dictionary</key>
+						<string>TextByTypeDict</string>
+						<key>MacroActionType</key>
+						<string>SetDictionaryToJSON</string>
+						<key>Text</key>
+						<string>{
+"public.html": "&lt;b&gt;html&lt;b&gt;"
+}</string>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>834758</integer>
+						<key>MacroActionType</key>
+						<string>ExecuteSubroutine</string>
+						<key>MacroUID</key>
+						<string>FBA1F1AF-100C-4F6E-A7DD-60640132CDDB</string>
+						<key>Parameters</key>
+						<array>
+							<string>TextByTypeDict</string>
+						</array>
+						<key>ResultVariable</key>
+						<string>VarName</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>745965883.49011695</real>
+				<key>ModificationDate</key>
+				<real>745973484.38370597</real>
+				<key>Name</key>
+				<string>TEST: Copy Typed Text to Clipboard</string>
+				<key>Triggers</key>
+				<array/>
+				<key>UID</key>
+				<string>7B1014E5-03B7-4785-8235-04253A01E01F</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Utilities</string>
+		<key>ToggleMacroUID</key>
+		<string>ADADDEAE-4C84-4232-A1D4-6024E0394E12</string>
+		<key>UID</key>
+		<string>3D83B3B9-1B5D-40CF-9DDF-04760174669F</string>
+	</dict>
+</array>
+</plist>

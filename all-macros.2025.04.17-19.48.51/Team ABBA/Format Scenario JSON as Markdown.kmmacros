@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>743371598.00417197</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>ActionUID</key>
+						<integer>833544</integer>
+						<key>DisplayKind</key>
+						<string>Variable</string>
+						<key>HonourFailureSettings</key>
+						<true/>
+						<key>IncludeStdErr</key>
+						<false/>
+						<key>IncludedVariables</key>
+						<array>
+							<string>9999</string>
+						</array>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>ExecuteJavaScriptForAutomation</string>
+						<key>Path</key>
+						<string></string>
+						<key>Text</key>
+						<string>function getTicketLinkMarkdown(testName) {
+    var ticket = testName.replace(/.*(GEAT-\d+).*/, '$1');
+    var url = 'https://underarmour.atlassian.net/browse/' + ticket;
+    return '[' + ticket + '](' + url + ')';
+}
+
+function formatMarkdown() {
+    var json = kmvar.ScenarioJSON;
+    var scenarioMetadata = JSON.parse(json);
+    var scenario = scenarioMetadata.scenario;
+    var markdown = '**A/B Test Notes**' +
+        '\n' +
+        '\n- **Ticket:** ' + getTicketLinkMarkdown(scenario.name) +
+        '\n- **Test Name:** ```' + scenario.name + '```' +
+        '\n- **[Adobe Target Activity](' + scenario.activityUrl + ')**' +
+        '\n- **Environment:** ```' + scenario.environment + '```' +
+        '\n- **Debugging Removed:** ❓' +
+        '\n- **QA Links**' + scenario.links.map(function (link) {
+            var query = `${link.query}${scenario.qaParam}`;
+            return '\n    - **' + link.text + ':** ```' + query + '```';
+        });
+
+    return markdown;
+};
+
+return formatMarkdown();
+</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+						<key>TrimResults</key>
+						<true/>
+						<key>TrimResultsNew</key>
+						<true/>
+						<key>UseModernSyntax</key>
+						<true/>
+						<key>UseText</key>
+						<true/>
+						<key>Variable</key>
+						<string>ScenarioMD</string>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>833954</integer>
+						<key>MacroActionType</key>
+						<string>Return</string>
+						<key>Text</key>
+						<string>%Variable%ScenarioMD%</string>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>745287820.39240205</real>
+				<key>ModificationDate</key>
+				<real>745567483.98972797</real>
+				<key>Name</key>
+				<string>Format Scenario JSON as Markdown</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>MacroTriggerType</key>
+						<string>Subroutine</string>
+						<key>Parameters</key>
+						<array>
+							<string>ScenarioJSON</string>
+						</array>
+						<key>ReturnsValue</key>
+						<true/>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>22127E22-D4E6-40FC-85A0-6A3A5C8577A7</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Team ABBA</string>
+		<key>ToggleMacroUID</key>
+		<string>45801DCA-3C53-477C-B01F-8E7C1ECAC704</string>
+		<key>UID</key>
+		<string>47333596-2996-462D-AEA7-98FBE9B6D97D</string>
+	</dict>
+</array>
+</plist>

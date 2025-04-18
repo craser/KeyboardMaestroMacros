@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>742148210.69860899</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>ActionUID</key>
+						<integer>830764</integer>
+						<key>MacroActionType</key>
+						<string>SetVariableToText</string>
+						<key>Text</key>
+						<string>UAC-C02ZV529MD6P</string>
+						<key>Variable</key>
+						<string>WorkHostName</string>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>830763</integer>
+						<key>DisplayKind</key>
+						<string>Variable</string>
+						<key>HonourFailureSettings</key>
+						<true/>
+						<key>IncludeStdErr</key>
+						<false/>
+						<key>IncludedVariables</key>
+						<array>
+							<string>9999</string>
+						</array>
+						<key>MacroActionType</key>
+						<string>ExecuteShellScript</string>
+						<key>Path</key>
+						<string></string>
+						<key>Source</key>
+						<string>Nothing</string>
+						<key>Text</key>
+						<string>if [ `hostname` == "$KMVAR_WorkHostName" ]; then
+	echo "true"
+else
+	echo "false"
+fi</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+						<key>TrimResults</key>
+						<true/>
+						<key>TrimResultsNew</key>
+						<true/>
+						<key>UseText</key>
+						<true/>
+						<key>Variable</key>
+						<string>IsWorkComputer</string>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>830766</integer>
+						<key>IsActive</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>Log</string>
+						<key>Text</key>
+						<string>IsWorkComputer: %Variable%IsWorkComputer%</string>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>830765</integer>
+						<key>MacroActionType</key>
+						<string>Return</string>
+						<key>Text</key>
+						<string>%Variable%IsWorkComputer%</string>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>742148224.86828399</real>
+				<key>ModificationDate</key>
+				<real>742151852.65159905</real>
+				<key>Name</key>
+				<string>Is Work Computer</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>MacroTriggerType</key>
+						<string>Subroutine</string>
+						<key>Parameters</key>
+						<array/>
+						<key>ReturnsValue</key>
+						<true/>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>E0829925-8B02-430E-A713-DCA4D5F09DA9</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Application Shortcuts</string>
+		<key>ToggleMacroUID</key>
+		<string>10DE2223-E18E-463E-91E6-669A6F973E5F</string>
+		<key>UID</key>
+		<string>BC2C98A7-9664-4489-BC7C-8DA6D13C06CA</string>
+	</dict>
+</array>
+</plist>

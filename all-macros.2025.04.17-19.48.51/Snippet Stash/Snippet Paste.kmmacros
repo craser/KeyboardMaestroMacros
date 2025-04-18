@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>744852222.39280498</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>ActionUID</key>
+						<integer>833125</integer>
+						<key>MacroActionType</key>
+						<string>ExecuteSubroutine</string>
+						<key>MacroUID</key>
+						<string>883980A4-E34C-4435-A443-AFA6C5484D2D</string>
+						<key>Parameters</key>
+						<array>
+							<string>%TriggerValue%</string>
+						</array>
+						<key>ResultVariable</key>
+						<string>VarName</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>745102958.76546597</real>
+				<key>ModificationDate</key>
+				<real>745103031.57492805</real>
+				<key>Name</key>
+				<string>Snippet Paste</string>
+				<key>Triggers</key>
+				<array/>
+				<key>UID</key>
+				<string>D90FC7B1-EBCB-4FD4-829E-45A53F300B93</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Snippet Stash</string>
+		<key>ToggleMacroUID</key>
+		<string>8C342E7C-C614-42AF-A93A-0F31535A90CB</string>
+		<key>UID</key>
+		<string>122EC607-1FF7-411A-8AA9-7C44EA923503</string>
+	</dict>
+</array>
+</plist>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>741131122.48107696</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>ActionUID</key>
+						<integer>829115</integer>
+						<key>DisplayKind</key>
+						<string>Variable</string>
+						<key>HonourFailureSettings</key>
+						<true/>
+						<key>IncludeStdErr</key>
+						<false/>
+						<key>IncludedVariables</key>
+						<array>
+							<string>9999</string>
+						</array>
+						<key>MacroActionType</key>
+						<string>ExecuteJavaScriptForAutomation</string>
+						<key>Path</key>
+						<string></string>
+						<key>Text</key>
+						<string>const js = kmvar.UserJS;
+const filePath = kmvar.FilePath;
+
+function extractUserJsHeader(userJsText, localFilePath) {
+    // Split the text by lines
+    const lines = userJsText.split('\n');
+    
+    // Extract header lines
+    const headerLines = [];
+    for (let line of lines) {
+        headerLines.push(line);
+        // Break once the header ends (assuming headers are contiguous and end with ==/UserScript==)
+        if (line.includes('==/UserScript==')) {
+            break;
+        }
+    }
+
+    // Add @require line for the local file
+    headerLines.splice(headerLines.length - 1, 0, `// @require      file://${localFilePath}`);
+    
+    // Return the header as a string
+    return headerLines.join('\n');
+}
+
+return extractUserJsHeader(js, filePath);</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+						<key>TrimResults</key>
+						<true/>
+						<key>TrimResultsNew</key>
+						<true/>
+						<key>UseModernSyntax</key>
+						<true/>
+						<key>UseText</key>
+						<true/>
+						<key>Variable</key>
+						<string>UserJSHeader</string>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>829130</integer>
+						<key>MacroActionType</key>
+						<string>Return</string>
+						<key>Text</key>
+						<string>%Variable%UserJSHeader%</string>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>741131323.70404196</real>
+				<key>ModificationDate</key>
+				<real>741136799.38086903</real>
+				<key>Name</key>
+				<string>Create .user.js header with @require for local file</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>MacroTriggerType</key>
+						<string>Subroutine</string>
+						<key>Parameters</key>
+						<array>
+							<string>UserJS</string>
+							<string>FilePath</string>
+						</array>
+						<key>ReturnsValue</key>
+						<true/>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>44271419-A574-43BF-9571-0A2389806CB4</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Web Development</string>
+		<key>ToggleMacroUID</key>
+		<string>6E0A4455-E192-47CD-B207-F949F9876521</string>
+		<key>UID</key>
+		<string>5F6B1D0B-17BF-4061-9F05-DE5EE7974A9E</string>
+	</dict>
+</array>
+</plist>

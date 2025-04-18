@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>662678683.24790704</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>ActionUID</key>
+						<integer>832608</integer>
+						<key>MacroActionType</key>
+						<string>SetVariableToText</string>
+						<key>Text</key>
+						<string>one
+two
+three</string>
+						<key>Variable</key>
+						<string>TestLines</string>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>832609</integer>
+						<key>Actions</key>
+						<array>
+							<dict>
+								<key>ActionUID</key>
+								<integer>832610</integer>
+								<key>MacroActionType</key>
+								<string>SetVariableToText</string>
+								<key>Text</key>
+								<string>%Variable%TestOutput%
+[[%Variable%line%]]</string>
+								<key>Variable</key>
+								<string>TestOutput</string>
+							</dict>
+						</array>
+						<key>Collections</key>
+						<dict>
+							<key>CollectionList</key>
+							<array>
+								<dict>
+									<key>CollectionType</key>
+									<string>LinesIn</string>
+									<key>IncludeBlankLines</key>
+									<false/>
+									<key>Source</key>
+									<string>Variable</string>
+									<key>Variable</key>
+									<string>TestLines</string>
+								</dict>
+							</array>
+						</dict>
+						<key>MacroActionType</key>
+						<string>For</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+						<key>Variable</key>
+						<string>line</string>
+					</dict>
+					<dict>
+						<key>Action</key>
+						<string>DisplayBriefly</string>
+						<key>ActionUID</key>
+						<integer>832611</integer>
+						<key>MacroActionType</key>
+						<string>InsertText</string>
+						<key>Text</key>
+						<string>%Variable%TestOutput%</string>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>744337987.42078197</real>
+				<key>ModificationDate</key>
+				<real>744339333.691957</real>
+				<key>Name</key>
+				<string>Test Iteration over Lines</string>
+				<key>Triggers</key>
+				<array/>
+				<key>UID</key>
+				<string>A009CAE6-3E6D-43DA-AA55-89864843C909</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Global Macro Group</string>
+		<key>ToggleMacroUID</key>
+		<string>CD2D3386-B425-4EE9-8B0B-8ACB2AE78A76</string>
+		<key>UID</key>
+		<string>804D32AF-0B39-439F-8EF3-493A833B14CA</string>
+	</dict>
+</array>
+</plist>

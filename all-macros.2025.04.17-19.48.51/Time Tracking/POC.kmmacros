@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>694392727.11043596</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>ActionUID</key>
+						<integer>813363</integer>
+						<key>ButtonID</key>
+						<string>R2C1</string>
+						<key>MacroActionType</key>
+						<string>StreamDeckShow</string>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>694421388.05774295</real>
+				<key>ModificationDate</key>
+				<real>694421842.03050494</real>
+				<key>Name</key>
+				<string>POC</string>
+				<key>Triggers</key>
+				<array/>
+				<key>UID</key>
+				<string>68138BEC-5B75-4C4D-B062-7C0FA73530AE</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Time Tracking</string>
+		<key>ToggleMacroUID</key>
+		<string>E3342CAE-3AE2-45B9-A234-9227EA2AFD7A</string>
+		<key>UID</key>
+		<string>3943E510-04EE-44F2-84F2-FC900670C457</string>
+	</dict>
+</array>
+</plist>

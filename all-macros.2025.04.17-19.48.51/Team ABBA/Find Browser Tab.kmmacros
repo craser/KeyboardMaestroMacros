@@ -1,0 +1,594 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>743371598.00417197</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>ActionColor</key>
+						<string>Green</string>
+						<key>ActionUID</key>
+						<integer>817068</integer>
+						<key>MacroActionType</key>
+						<string>Comment</string>
+						<key>StyledText</key>
+						<data>
+						cnRmZAAAAAADAAAAAgAAAAcAAABU
+						WFQucnRmAQAAAC7BAgAAKwAAAAEA
+						AAC5AgAAe1xydGYxXGFuc2lcYW5z
+						aWNwZzEyNTJcY29jb2FydGYyNzA5
+						Clxjb2NvYXRleHRzY2FsaW5nMFxj
+						b2NvYXBsYXRmb3JtMHtcZm9udHRi
+						bFxmMFxmc3dpc3NcZmNoYXJzZXQw
+						IEhlbHZldGljYTt9CntcY29sb3J0
+						Ymw7XHJlZDI1NVxncmVlbjI1NVxi
+						bHVlMjU1O1xyZWQwXGdyZWVuMFxi
+						bHVlMDt9CntcKlxleHBhbmRlZGNv
+						bG9ydGJsOztcY3NzcmdiXGMwXGMw
+						XGMwXGM4NDcwNlxjbmFtZSBjb250
+						cm9sVGV4dENvbG9yO30KXHBhcmRc
+						dHg1NjBcdHgxMTIwXHR4MTY4MFx0
+						eDIyNDBcdHgyODAwXHR4MzM2MFx0
+						eDM5MjBcdHg0NDgwXHR4NTA0MFx0
+						eDU2MDBcdHg2MTYwXHR4NjcyMFxw
+						YXJkaXJuYXR1cmFsXHBhcnRpZ2h0
+						ZW5mYWN0b3IwCgpcZjBcZnMyNiBc
+						Y2YyIE9kZGx5LCBJIGZvdW5kIHRo
+						YXQgaGF2aW5nIHRoZSBKUyBiZWxv
+						dyByZXR1cm4gdHJ1ZS9mYWxzZSBh
+						bmQgdGhlbiBvcGVuaW5nIHRoZSBV
+						UkwgdXNpbmcgS2V5Ym9hcmQgTWFl
+						c3Ryb1wnOTJzIGFjdGlvbiB3b3Jr
+						ZWQgTVVDSCBiZXR0ZXIgJiBtb3Jl
+						IHJlbGlhYmx5IHRoYW4gb3Blbmlu
+						ZyB0aGUgVVJMIGRpcmVjdGx5IHdp
+						dGhpbiB0aGUgSlMuIFdpdGggdGhl
+						IEpTLCBzb21ldGltZXMgdGhlIHRh
+						YiBvcGVucyBpbiB0aW1lIHRvIHJl
+						Y2VpdmUgdGhlIFVSTCwgYW5kIHNv
+						bWV0aW1lcyBub3QsIGJlY2F1c2Ug
+						QXBwbGVTY3JpcHQgJiBKU1ggYXJl
+						IGhvcnJibGUufQEAAAAjAAAAAQAA
+						AAcAAABUWFQucnRmEAAAAHUBZWS2
+						AQAAAAAAAAAAAAA=
+						</data>
+						<key>Title</key>
+						<string>Development Notes</string>
+					</dict>
+					<dict>
+						<key>ActionName</key>
+						<string>log all the input</string>
+						<key>ActionUID</key>
+						<integer>832655</integer>
+						<key>Actions</key>
+						<array>
+							<dict>
+								<key>ActionUID</key>
+								<integer>832656</integer>
+								<key>MacroActionType</key>
+								<string>Log</string>
+								<key>Text</key>
+								<string>[%ExecutingThisMacro%] BrowserName: %Variable%BrowserName%</string>
+							</dict>
+							<dict>
+								<key>ActionUID</key>
+								<integer>832657</integer>
+								<key>MacroActionType</key>
+								<string>Log</string>
+								<key>Text</key>
+								<string>[%ExecutingThisMacro%] TitleRegex: %Variable%TitleRegex%</string>
+							</dict>
+							<dict>
+								<key>ActionUID</key>
+								<integer>832658</integer>
+								<key>MacroActionType</key>
+								<string>Log</string>
+								<key>Text</key>
+								<string>[%ExecutingThisMacro%] DefaultUrl: %Variable%DefaultUrl%</string>
+							</dict>
+							<dict>
+								<key>ActionUID</key>
+								<integer>832659</integer>
+								<key>MacroActionType</key>
+								<string>Log</string>
+								<key>Text</key>
+								<string>[%ExecutingThisMacro%] HostRegex: %Variable%HostRegex%</string>
+							</dict>
+							<dict>
+								<key>ActionUID</key>
+								<integer>832660</integer>
+								<key>MacroActionType</key>
+								<string>Log</string>
+								<key>Text</key>
+								<string>[%ExecutingThisMacro%] AcceptIncognito: %Variable%AcceptIncognito%</string>
+							</dict>
+							<dict>
+								<key>ActionUID</key>
+								<integer>832661</integer>
+								<key>MacroActionType</key>
+								<string>Log</string>
+								<key>Text</key>
+								<string>[%ExecutingThisMacro%] RequireIncognito: %Variable%RequireIncognito%</string>
+							</dict>
+						</array>
+						<key>MacroActionType</key>
+						<string>Group</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>ActionName</key>
+						<string>Open Browser</string>
+						<key>ActionUID</key>
+						<integer>825336</integer>
+						<key>CaseEntries</key>
+						<array>
+							<dict>
+								<key>Actions</key>
+								<array>
+									<dict>
+										<key>ActionUID</key>
+										<integer>825339</integer>
+										<key>AllWindows</key>
+										<true/>
+										<key>AlreadyActivatedActionType</key>
+										<string>Normal</string>
+										<key>Application</key>
+										<dict>
+											<key>BundleIdentifier</key>
+											<string>com.google.Chrome</string>
+											<key>Name</key>
+											<string>Google Chrome</string>
+											<key>NewFile</key>
+											<string>/Applications/Google Chrome.app</string>
+										</dict>
+										<key>MacroActionType</key>
+										<string>ActivateApplication</string>
+										<key>ReopenWindows</key>
+										<false/>
+										<key>TimeOutAbortsMacro</key>
+										<true/>
+									</dict>
+								</array>
+								<key>ConditionType</key>
+								<string>Contains</string>
+								<key>TestValue</key>
+								<string>Google Chrome</string>
+							</dict>
+							<dict>
+								<key>Actions</key>
+								<array>
+									<dict>
+										<key>ActionUID</key>
+										<integer>825340</integer>
+										<key>AllWindows</key>
+										<true/>
+										<key>AlreadyActivatedActionType</key>
+										<string>Normal</string>
+										<key>Application</key>
+										<dict>
+											<key>BundleIdentifier</key>
+											<string>com.apple.Safari</string>
+											<key>Name</key>
+											<string>Safari</string>
+											<key>NewFile</key>
+											<string>/Applications/Safari.app</string>
+										</dict>
+										<key>MacroActionType</key>
+										<string>ActivateApplication</string>
+										<key>ReopenWindows</key>
+										<false/>
+										<key>TimeOutAbortsMacro</key>
+										<true/>
+									</dict>
+								</array>
+								<key>ConditionType</key>
+								<string>Contains</string>
+								<key>TestValue</key>
+								<string>Safari</string>
+							</dict>
+						</array>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>Switch</string>
+						<key>Source</key>
+						<string>Variable</string>
+						<key>Variable</key>
+						<string>BrowserName</string>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>817057</integer>
+						<key>DisplayKind</key>
+						<string>Variable</string>
+						<key>HonourFailureSettings</key>
+						<true/>
+						<key>IncludeStdErr</key>
+						<false/>
+						<key>IncludedVariables</key>
+						<array>
+							<string>9999</string>
+						</array>
+						<key>MacroActionType</key>
+						<string>ExecuteJavaScriptForAutomation</string>
+						<key>Path</key>
+						<string></string>
+						<key>Text</key>
+						<string>(function () {
+    let km = Application('Keyboard Maestro Engine');
+    let browserName = km.getvariable('BrowserName');
+    let titleRegexString = km.getvariable('TitleRegex');
+    const titleRegex = eval(titleRegexString); // I want to pass a regex literal, so y'know...
+    let hostRegexString = km.getvariable('HostRegex');
+    const hostRegex = hostRegexString &amp;&amp; eval(hostRegexString); // I want to pass a regex literal, so y'know...
+    let acceptIncognito = /true/i.test(km.getvariable('AcceptIncognito'));
+    let requireIncognito = /true/i.test(km.getvariable('RequireIncognito'));
+    let defaultUrl = km.getvariable('DefaultUrl');
+
+    function matchesMode(mode) {
+        if (requireIncognito) {
+            return mode != 'normal';
+        } else if (acceptIncognito) {
+            return true;
+        } else {
+            return mode == 'normal';
+        }
+    }
+ 	
+    function matchesTab(title, url) {
+		if (url == defaultUrl) {
+			return true;
+        } else if (titleRegex &amp;&amp; titleRegex.test(title)) {
+			return true;
+		} else if (hostRegex &amp;&amp; hostRegex.test(url)) {
+			return true;
+		} else {
+ 			return false;
+		}
+	}
+
+
+    function findInChrome() {
+        const BROWSER_NAME = 'Google Chrome';
+        let chrome = Application(BROWSER_NAME);
+        let found = false;
+        chrome.windows().forEach((win, winIdx) =&gt; {
+            if (matchesMode(win.mode())) {
+                win.tabs().forEach((tab, tabIdx) =&gt; {
+                    let title = tab.title();
+                    let url = tab.url();
+                    if (!found &amp;&amp; matchesTab(title, url)) {
+                        chrome.windows[winIdx].activeTabIndex = tabIdx + 1; // +1 because 1-based
+                        // do this whole other thing because win.index doesn't do what it says it should do
+                        Application('System Events').processes[BROWSER_NAME].windows[winIdx].actions['AXRaise'].perform();
+                        chrome.activate();
+                        found = true;
+                    }
+                });
+            }
+        });
+        return found;
+    }
+
+    function findInSafari() {
+        const BROWSER_NAME = 'Safari';
+        let safari = Application(BROWSER_NAME);
+        let found = false;
+        safari.windows().forEach((win, winIdx) =&gt; {
+            win.tabs().forEach((tab) =&gt; {
+                let title = tab.name();
+                let url = tab.url();
+                if (!found &amp;&amp; matchesTab(title, url)) {
+                    safari.windows[winIdx].currentTab = tab;
+                    // do this whole other thing because win.index doesn't do what it says it should do
+                    Application('System Events').processes[BROWSER_NAME].windows[winIdx].actions['AXRaise'].perform();
+                    safari.activate();
+                    found = true;
+                }
+            });
+        });
+        return found;
+    }
+
+    switch (browserName) {
+        case 'Google Chrome':
+            return findInChrome();
+            break;
+        case 'Safari':
+            return findInSafari(titleRegex, hostRegex);
+            break;
+        default:
+            return false;
+    }
+})();
+
+
+</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+						<key>TrimResults</key>
+						<true/>
+						<key>TrimResultsNew</key>
+						<true/>
+						<key>UseModernSyntax</key>
+						<false/>
+						<key>UseText</key>
+						<true/>
+						<key>Variable</key>
+						<string>TabFound</string>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>832662</integer>
+						<key>MacroActionType</key>
+						<string>Log</string>
+						<key>Text</key>
+						<string>[%ExecutingThisMacro%] tab found: %Variable%TabFound%</string>
+					</dict>
+					<dict>
+						<key>ActionName</key>
+						<string>if existing tab isn't found, open DefaultUrl if provided</string>
+						<key>ActionUID</key>
+						<integer>817058</integer>
+						<key>Conditions</key>
+						<dict>
+							<key>ConditionList</key>
+							<array>
+								<dict>
+									<key>ConditionType</key>
+									<string>Variable</string>
+									<key>Variable</key>
+									<string>TabFound</string>
+									<key>VariableConditionType</key>
+									<string>IsNot</string>
+									<key>VariableValue</key>
+									<string>true</string>
+								</dict>
+								<dict>
+									<key>ConditionType</key>
+									<string>Text</string>
+									<key>Text</key>
+									<string>%Variable%DefaultUrl%</string>
+									<key>TextConditionType</key>
+									<string>IsNotEmpty</string>
+									<key>TextValue</key>
+									<string></string>
+								</dict>
+							</array>
+							<key>ConditionListMatch</key>
+							<string>All</string>
+						</dict>
+						<key>ElseActions</key>
+						<array/>
+						<key>MacroActionType</key>
+						<string>IfThenElse</string>
+						<key>ThenActions</key>
+						<array>
+							<dict>
+								<key>ActionUID</key>
+								<integer>831360</integer>
+								<key>Conditions</key>
+								<dict>
+									<key>ConditionList</key>
+									<array>
+										<dict>
+											<key>ConditionType</key>
+											<string>Variable</string>
+											<key>Variable</key>
+											<string>RequireIncognito</string>
+											<key>VariableConditionType</key>
+											<string>Is</string>
+											<key>VariableValue</key>
+											<string>true</string>
+										</dict>
+									</array>
+									<key>ConditionListMatch</key>
+									<string>All</string>
+								</dict>
+								<key>ElseActions</key>
+								<array>
+									<dict>
+										<key>ActionName</key>
+										<string>Open DefaultUrl in default browser</string>
+										<key>ActionUID</key>
+										<integer>831371</integer>
+										<key>IsDefaultApplication</key>
+										<true/>
+										<key>IsDisclosed</key>
+										<false/>
+										<key>MacroActionType</key>
+										<string>OpenURL</string>
+										<key>TimeOutAbortsMacro</key>
+										<true/>
+										<key>URL</key>
+										<string>%Variable%DefaultUrl%</string>
+									</dict>
+								</array>
+								<key>MacroActionType</key>
+								<string>IfThenElse</string>
+								<key>ThenActions</key>
+								<array>
+									<dict>
+										<key>ActionName</key>
+										<string>Open the DefaultUrl in a new Incognito Window</string>
+										<key>ActionUID</key>
+										<integer>831370</integer>
+										<key>Actions</key>
+										<array>
+											<dict>
+												<key>ActionUID</key>
+												<integer>831369</integer>
+												<key>MacroActionType</key>
+												<string>Log</string>
+												<key>Text</key>
+												<string>Opening in new Incognito window: %Variable%DefaultUrl%</string>
+											</dict>
+											<dict>
+												<key>ActionUID</key>
+												<integer>831361</integer>
+												<key>AllWindows</key>
+												<false/>
+												<key>AlreadyActivatedActionType</key>
+												<string>Normal</string>
+												<key>Application</key>
+												<dict>
+													<key>BundleIdentifier</key>
+													<string>com.google.Chrome</string>
+													<key>Name</key>
+													<string>Google Chrome</string>
+													<key>NewFile</key>
+													<string>/Applications/Google Chrome.app</string>
+												</dict>
+												<key>MacroActionType</key>
+												<string>ActivateApplication</string>
+												<key>ReopenWindows</key>
+												<false/>
+												<key>TimeOutAbortsMacro</key>
+												<true/>
+											</dict>
+											<dict>
+												<key>ActionUID</key>
+												<integer>831362</integer>
+												<key>MacroActionType</key>
+												<string>Pause</string>
+												<key>Time</key>
+												<string>0.4</string>
+												<key>TimeOutAbortsMacro</key>
+												<true/>
+											</dict>
+											<dict>
+												<key>ActionUID</key>
+												<integer>831363</integer>
+												<key>MacroActionType</key>
+												<string>SelectMenuItem</string>
+												<key>Menu</key>
+												<array>
+													<string>File</string>
+													<string>New Incognito Window</string>
+												</array>
+												<key>TargetApplication</key>
+												<dict/>
+												<key>TargetingType</key>
+												<string>Front</string>
+											</dict>
+											<dict>
+												<key>ActionUID</key>
+												<integer>831365</integer>
+												<key>MacroActionType</key>
+												<string>Pause</string>
+												<key>Time</key>
+												<string>1.5</string>
+												<key>TimeOutAbortsMacro</key>
+												<true/>
+											</dict>
+											<dict>
+												<key>ActionUID</key>
+												<integer>831366</integer>
+												<key>MacroActionType</key>
+												<string>SelectMenuItem</string>
+												<key>Menu</key>
+												<array>
+													<string>File</string>
+													<string>Open Location...</string>
+												</array>
+												<key>TargetApplication</key>
+												<dict/>
+												<key>TargetingType</key>
+												<string>Front</string>
+											</dict>
+											<dict>
+												<key>Action</key>
+												<string>ByPasting</string>
+												<key>ActionUID</key>
+												<integer>831367</integer>
+												<key>MacroActionType</key>
+												<string>InsertText</string>
+												<key>Text</key>
+												<string>%Variable%DefaultUrl%</string>
+											</dict>
+											<dict>
+												<key>ActionUID</key>
+												<integer>831368</integer>
+												<key>KeyCode</key>
+												<integer>36</integer>
+												<key>MacroActionType</key>
+												<string>SimulateKeystroke</string>
+												<key>Modifiers</key>
+												<integer>0</integer>
+												<key>ReleaseAll</key>
+												<false/>
+												<key>TargetApplication</key>
+												<dict/>
+												<key>TargetingType</key>
+												<string>Front</string>
+											</dict>
+										</array>
+										<key>MacroActionType</key>
+										<string>Group</string>
+										<key>TimeOutAbortsMacro</key>
+										<true/>
+									</dict>
+								</array>
+								<key>TimeOutAbortsMacro</key>
+								<true/>
+							</dict>
+						</array>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>831784</integer>
+						<key>MacroActionType</key>
+						<string>Return</string>
+						<key>Text</key>
+						<string>%Variable%TabFound%</string>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>696545976.92089903</real>
+				<key>ModificationDate</key>
+				<real>744832349.51289105</real>
+				<key>Name</key>
+				<string>Find Browser Tab</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>MacroTriggerType</key>
+						<string>Subroutine</string>
+						<key>Parameters</key>
+						<array>
+							<string>BrowserName</string>
+							<string>TitleRegex</string>
+							<string>DefaultUrl</string>
+							<string>HostRegex</string>
+							<string>AcceptIncognito</string>
+							<string>RequireIncognito</string>
+							<string>ForceNewWindow</string>
+						</array>
+						<key>ReturnsValue</key>
+						<true/>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>FE7C9BF7-E43A-468D-AFCA-5D89EFF53DB7</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Team ABBA</string>
+		<key>ToggleMacroUID</key>
+		<string>45801DCA-3C53-477C-B01F-8E7C1ECAC704</string>
+		<key>UID</key>
+		<string>47333596-2996-462D-AEA7-98FBE9B6D97D</string>
+	</dict>
+</array>
+</plist>

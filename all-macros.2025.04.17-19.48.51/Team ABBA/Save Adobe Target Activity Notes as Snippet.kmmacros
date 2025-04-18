@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>743371598.00417197</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>ActionUID</key>
+						<integer>833948</integer>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>Log</string>
+						<key>Text</key>
+						<string>[%ExecutingThisMacro%] Saving Adobe Target Activity notes as Snippet</string>
+					</dict>
+					<dict>
+						<key>ActionName</key>
+						<string>Get JSON from browser ➤ ScenarioJSON</string>
+						<key>ActionUID</key>
+						<integer>833949</integer>
+						<key>DisplayKind</key>
+						<string>Variable</string>
+						<key>HonourFailureSettings</key>
+						<true/>
+						<key>IncludeStdErr</key>
+						<false/>
+						<key>IncludedVariables</key>
+						<array>
+							<string>9999</string>
+						</array>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>ExecuteJavaScript</string>
+						<key>Path</key>
+						<string></string>
+						<key>Text</key>
+						<string>return (function () {
+	try {
+		let json = localStorage.getItem('abba-scenario');
+		return json;
+	} catch (e) {}
+})();</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+						<key>TrimResults</key>
+						<true/>
+						<key>TrimResultsNew</key>
+						<true/>
+						<key>UseModernSyntax</key>
+						<true/>
+						<key>UseText</key>
+						<true/>
+						<key>Variable</key>
+						<string>ScenarioJSON</string>
+						<key>WebBrowser</key>
+						<string>Front Browser</string>
+					</dict>
+					<dict>
+						<key>ActionName</key>
+						<string>Double-check freshness of stored Activity info</string>
+						<key>ActionUID</key>
+						<integer>833967</integer>
+						<key>Actions</key>
+						<array>
+							<dict>
+								<key>ActionUID</key>
+								<integer>833961</integer>
+								<key>DisplayKind</key>
+								<string>Variable</string>
+								<key>HonourFailureSettings</key>
+								<true/>
+								<key>IncludeStdErr</key>
+								<false/>
+								<key>IncludedVariables</key>
+								<array>
+									<string>9999</string>
+								</array>
+								<key>IsDisclosed</key>
+								<false/>
+								<key>MacroActionType</key>
+								<string>ExecuteJavaScript</string>
+								<key>Path</key>
+								<string></string>
+								<key>Text</key>
+								<string>return window.location.href</string>
+								<key>TimeOutAbortsMacro</key>
+								<true/>
+								<key>TrimResults</key>
+								<true/>
+								<key>TrimResultsNew</key>
+								<true/>
+								<key>UseModernSyntax</key>
+								<true/>
+								<key>UseText</key>
+								<true/>
+								<key>Variable</key>
+								<string>local_BrowserUrl</string>
+								<key>WebBrowser</key>
+								<string>Front Browser</string>
+							</dict>
+							<dict>
+								<key>ActionUID</key>
+								<integer>833962</integer>
+								<key>DisplayKind</key>
+								<string>Variable</string>
+								<key>HonourFailureSettings</key>
+								<true/>
+								<key>IncludeStdErr</key>
+								<false/>
+								<key>IncludedVariables</key>
+								<array>
+									<string>9999</string>
+								</array>
+								<key>IsDisclosed</key>
+								<false/>
+								<key>MacroActionType</key>
+								<string>ExecuteJavaScriptForAutomation</string>
+								<key>Path</key>
+								<string></string>
+								<key>Text</key>
+								<string>const json = kmvar.ScenarioJSON;
+const scenarioData = JSON.parse(json);
+return scenarioData.scenario.activityUrl</string>
+								<key>TimeOutAbortsMacro</key>
+								<true/>
+								<key>TrimResults</key>
+								<true/>
+								<key>TrimResultsNew</key>
+								<true/>
+								<key>UseModernSyntax</key>
+								<true/>
+								<key>UseText</key>
+								<true/>
+								<key>Variable</key>
+								<string>local_ActivityUrl</string>
+							</dict>
+							<dict>
+								<key>ActionName</key>
+								<string>If activity data is stale, confirm before continuing.</string>
+								<key>ActionUID</key>
+								<integer>833963</integer>
+								<key>Conditions</key>
+								<dict>
+									<key>ConditionList</key>
+									<array>
+										<dict>
+											<key>ConditionType</key>
+											<string>Variable</string>
+											<key>Variable</key>
+											<string>local_ActivityUrl</string>
+											<key>VariableConditionType</key>
+											<string>IsNot</string>
+											<key>VariableValue</key>
+											<string>%Variable%local_BrowserUrl%</string>
+										</dict>
+									</array>
+									<key>ConditionListMatch</key>
+									<string>All</string>
+								</dict>
+								<key>ElseActions</key>
+								<array/>
+								<key>IsDisclosed</key>
+								<false/>
+								<key>MacroActionType</key>
+								<string>IfThenElse</string>
+								<key>ThenActions</key>
+								<array>
+									<dict>
+										<key>ActionUID</key>
+										<integer>833964</integer>
+										<key>Buttons</key>
+										<array>
+											<dict>
+												<key>Button</key>
+												<string>OK</string>
+											</dict>
+											<dict>
+												<key>Button</key>
+												<string>Cancel</string>
+												<key>Cancel</key>
+												<true/>
+											</dict>
+										</array>
+										<key>MacroActionType</key>
+										<string>PromptForUserInput</string>
+										<key>Prompt</key>
+										<string>It looks like the info stored in the browser's local storage might be stale.
+
+Continue saving the QA Notes for this Activity?</string>
+										<key>TimeOutAbortsMacro</key>
+										<true/>
+										<key>Title</key>
+										<string>WARNING: Activity URL != Browser URL</string>
+										<key>Variables</key>
+										<array/>
+									</dict>
+								</array>
+								<key>TimeOutAbortsMacro</key>
+								<true/>
+							</dict>
+						</array>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>Group</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>833952</integer>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>ExecuteSubroutine</string>
+						<key>MacroUID</key>
+						<string>22127E22-D4E6-40FC-85A0-6A3A5C8577A7</string>
+						<key>Parameters</key>
+						<array>
+							<string>%Variable%ScenarioJSON%</string>
+						</array>
+						<key>ResultVariable</key>
+						<string>ScenarioMarkdown</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>ActionName</key>
+						<string>Get the scenario name ➤ ScenarioName</string>
+						<key>ActionUID</key>
+						<integer>833955</integer>
+						<key>DisplayKind</key>
+						<string>Variable</string>
+						<key>HonourFailureSettings</key>
+						<true/>
+						<key>IncludeStdErr</key>
+						<false/>
+						<key>IncludedVariables</key>
+						<array>
+							<string>9999</string>
+						</array>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>ExecuteJavaScriptForAutomation</string>
+						<key>Path</key>
+						<string></string>
+						<key>Text</key>
+						<string>const json = kmvar.ScenarioJSON;
+const meta = JSON.parse(json);
+const scenario = meta.scenario;
+return scenario.name</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+						<key>TrimResults</key>
+						<true/>
+						<key>TrimResultsNew</key>
+						<true/>
+						<key>UseModernSyntax</key>
+						<true/>
+						<key>UseText</key>
+						<true/>
+						<key>Variable</key>
+						<string>ScenarioName</string>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>833957</integer>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>ExecuteSubroutine</string>
+						<key>MacroUID</key>
+						<string>2B14AE3F-8EB0-4EE7-B449-68F137073AD0</string>
+						<key>Parameters</key>
+						<array>
+							<string>%Variable%ScenarioMarkdown%</string>
+							<string>%Variable%ScenarioName%.md</string>
+						</array>
+						<key>ResultVariable</key>
+						<string>ScenarioFile</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>833966</integer>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>Notification</string>
+						<key>SoundName</key>
+						<string>Blow</string>
+						<key>Subtitle</key>
+						<string></string>
+						<key>Text</key>
+						<string>Saved snippet: %Variable%ScenarioName%</string>
+						<key>Title</key>
+						<string>A/B Test Notes saved as snippet</string>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>745538972.35387504</real>
+				<key>ModificationDate</key>
+				<real>745779815.56560194</real>
+				<key>Name</key>
+				<string>Save Adobe Target Activity Notes as Snippet</string>
+				<key>Triggers</key>
+				<array/>
+				<key>UID</key>
+				<string>E4E61DA5-202B-4827-9EB3-9205BBB29B9D</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Team ABBA</string>
+		<key>ToggleMacroUID</key>
+		<string>45801DCA-3C53-477C-B01F-8E7C1ECAC704</string>
+		<key>UID</key>
+		<string>47333596-2996-462D-AEA7-98FBE9B6D97D</string>
+	</dict>
+</array>
+</plist>

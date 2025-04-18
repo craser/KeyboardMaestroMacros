@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>749258025.79251099</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>Action</key>
+						<string>MoveAndResize</string>
+						<key>ActionUID</key>
+						<integer>835558</integer>
+						<key>HeightExpression</key>
+						<string>SCREENVISIBLE(Front,Height)</string>
+						<key>HorizontalExpression</key>
+						<string>SCREENVISIBLE(Front,Left)</string>
+						<key>MacroActionType</key>
+						<string>ManipulateWindow</string>
+						<key>TargetApplication</key>
+						<dict/>
+						<key>Targeting</key>
+						<string>FrontWindow</string>
+						<key>TargetingType</key>
+						<string>Front</string>
+						<key>VerticalExpression</key>
+						<string>SCREENVISIBLE(Front,Top)</string>
+						<key>WidthExpression</key>
+						<string>SCREENVISIBLE(Front,Width)</string>
+						<key>WindowIndexExpression</key>
+						<string>2</string>
+						<key>WindowName</key>
+						<string></string>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>749258038.43684697</real>
+				<key>IsActive</key>
+				<false/>
+				<key>ModificationDate</key>
+				<real>749258417.95883799</real>
+				<key>Name</key>
+				<string>Whole Screen</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>FireType</key>
+						<string>Pressed</string>
+						<key>KeyCode</key>
+						<integer>34</integer>
+						<key>MacroTriggerType</key>
+						<string>HotKey</string>
+						<key>Modifiers</key>
+						<integer>4864</integer>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>EA239C6E-EF04-4E96-980C-24163B640EE1</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Window Placement</string>
+		<key>ToggleMacroUID</key>
+		<string>338519A6-012D-4FF4-B5FF-75D4B7A984A1</string>
+		<key>UID</key>
+		<string>29C6EA4C-91BE-4F53-B6D4-A74C82C2D0BF</string>
+	</dict>
+</array>
+</plist>

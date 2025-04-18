@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>740864496.29313195</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>ActionUID</key>
+						<integer>831227</integer>
+						<key>MacroActionType</key>
+						<string>Log</string>
+						<key>Text</key>
+						<string>[%ExecutingThisMacro%] absVault: %Variable%absVault%</string>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>831228</integer>
+						<key>MacroActionType</key>
+						<string>Log</string>
+						<key>Text</key>
+						<string>[%ExecutingThisMacro%] absPath: %Variable%absPath%</string>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>828619</integer>
+						<key>MacroActionType</key>
+						<string>ExecuteSubroutine</string>
+						<key>MacroUID</key>
+						<string>BED22675-5DEE-4F46-9D6D-6F391B4183F5</string>
+						<key>Parameters</key>
+						<array>
+							<string>%Variable%absVault%</string>
+						</array>
+						<key>ResultVariable</key>
+						<string>absVaultRoot</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>830821</integer>
+						<key>MacroActionType</key>
+						<string>Log</string>
+						<key>Text</key>
+						<string>[%ExecutingThisMacro%] path to Obsidian file: %Variable%absVaultRoot%/%Variable%absPath%</string>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>828622</integer>
+						<key>MacroActionType</key>
+						<string>Return</string>
+						<key>Text</key>
+						<string>%Variable%absVaultRoot%/%Variable%absPath%</string>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>740712393.00005198</real>
+				<key>ModificationDate</key>
+				<real>742328489.10080504</real>
+				<key>Name</key>
+				<string>Get Absolute Path to Obsidian File</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>MacroTriggerType</key>
+						<string>Subroutine</string>
+						<key>Parameters</key>
+						<array>
+							<string>absVault</string>
+							<string>absPath</string>
+						</array>
+						<key>ReturnsValue</key>
+						<true/>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>397658E2-EAF9-457B-9151-46EECD01D94E</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Obsidian Macros</string>
+		<key>ToggleMacroUID</key>
+		<string>7C42226A-774B-4977-BFE1-2F022636D3BB</string>
+		<key>UID</key>
+		<string>2E0841BA-0705-4E2E-9E16-21CBFEB297EE</string>
+	</dict>
+</array>
+</plist>

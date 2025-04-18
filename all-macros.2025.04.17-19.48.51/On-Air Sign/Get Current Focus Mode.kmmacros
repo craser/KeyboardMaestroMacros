@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>741421527.264148</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>ActionUID</key>
+						<integer>829949</integer>
+						<key>DisplayKind</key>
+						<string>Variable</string>
+						<key>HonourFailureSettings</key>
+						<true/>
+						<key>IncludeStdErr</key>
+						<false/>
+						<key>IncludedVariables</key>
+						<array>
+							<string>9999</string>
+						</array>
+						<key>MacroActionType</key>
+						<string>ExecuteJavaScriptForAutomation</string>
+						<key>Path</key>
+						<string></string>
+						<key>Text</key>
+						<string>const app = Application.currentApplication()
+app.includeStandardAdditions = true
+
+function getJSON(path) {
+	const fullPath = path.replace(/^~/, app.pathTo('home folder'))
+	const contents = app.read(fullPath)
+	return JSON.parse(contents)
+}
+
+function run() {
+
+	let focus = "No focus" // default
+	const assert = getJSON("~/Library/DoNotDisturb/DB/Assertions.json").data[0].storeAssertionRecords
+	const config = getJSON("~/Library/DoNotDisturb/DB/ModeConfigurations.json").data[0].modeConfigurations
+
+	if (assert) { // focus set manually
+
+		const modeid = assert[0].assertionDetails.assertionDetailsModeIdentifier
+		focus = config[modeid].mode.name
+
+	} else { // focus set by trigger
+
+		const date = new Date
+		const now = date.getHours() * 60 + date.getMinutes()
+
+		for (const modeid in config) {
+
+			const triggers = config[modeid].triggers.triggers[0]
+			if (triggers &amp;&amp; triggers.enabledSetting == 2) {
+
+				const start = triggers.timePeriodStartTimeHour * 60 + triggers.timePeriodStartTimeMinute
+				const end = triggers.timePeriodEndTimeHour * 60 + triggers.timePeriodEndTimeMinute
+				if (start &lt; end) {
+					if (now &gt;= start &amp;&amp; now &lt; end) {
+						focus = config[modeid].mode.name
+					}
+				} else if (start &gt; end) { // includes midnight
+					if (now &gt;= start || now &lt; end) {
+						focus = config[modeid].mode.name
+					}
+				}
+			}
+		}
+	}
+	return focus
+}
+
+return run();</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+						<key>TrimResults</key>
+						<true/>
+						<key>TrimResultsNew</key>
+						<true/>
+						<key>UseModernSyntax</key>
+						<true/>
+						<key>UseText</key>
+						<true/>
+						<key>Variable</key>
+						<string>CurrentFocusMode</string>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>829951</integer>
+						<key>MacroActionType</key>
+						<string>Return</string>
+						<key>Text</key>
+						<string>%Variable%CurrentFocusMode%</string>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>741422217.52812195</real>
+				<key>ModificationDate</key>
+				<real>741422305.45989299</real>
+				<key>Name</key>
+				<string>Get Current Focus Mode</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>MacroTriggerType</key>
+						<string>Subroutine</string>
+						<key>Parameters</key>
+						<array/>
+						<key>ReturnsValue</key>
+						<true/>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>8166228D-13D2-4066-B396-1F70AB5BBA89</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>On-Air Sign</string>
+		<key>ToggleMacroUID</key>
+		<string>7DCA5B4C-EBD7-45B8-A664-C1607EB8C45D</string>
+		<key>UID</key>
+		<string>4CF31D5F-9006-4865-9F35-5E708AC798E6</string>
+	</dict>
+</array>
+</plist>

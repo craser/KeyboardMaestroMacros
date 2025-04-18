@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>740864496.29313195</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>ActionUID</key>
+						<integer>831230</integer>
+						<key>MacroActionType</key>
+						<string>Log</string>
+						<key>Text</key>
+						<string>[%ExecutingMacro%] vault: %Variable%vault%</string>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>831231</integer>
+						<key>MacroActionType</key>
+						<string>Log</string>
+						<key>Text</key>
+						<string>[%ExecutingMacro%] path: %Variable%path%</string>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>828611</integer>
+						<key>DisplayKind</key>
+						<string>Variable</string>
+						<key>HonourFailureSettings</key>
+						<true/>
+						<key>IncludeStdErr</key>
+						<false/>
+						<key>IncludedVariables</key>
+						<array>
+							<string>9999</string>
+						</array>
+						<key>MacroActionType</key>
+						<string>ExecuteJavaScriptForAutomation</string>
+						<key>Path</key>
+						<string></string>
+						<key>Text</key>
+						<string>let encodedVault = encodeURI(kmvar.vault);
+let encodedPath = encodeURI(kmvar.path);
+return `obsidian://open?vault=${encodedVault}&amp;file=${encodedPath}`
+
+
+</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+						<key>TrimResults</key>
+						<true/>
+						<key>TrimResultsNew</key>
+						<true/>
+						<key>UseModernSyntax</key>
+						<true/>
+						<key>UseText</key>
+						<true/>
+						<key>Variable</key>
+						<string>ObURL</string>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>831232</integer>
+						<key>MacroActionType</key>
+						<string>Log</string>
+						<key>Text</key>
+						<string>[%ExecutingMacro%] ObURL: %Variable%ObURL%</string>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>828629</integer>
+						<key>MacroActionType</key>
+						<string>Return</string>
+						<key>Text</key>
+						<string>%Variable%ObURL%</string>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>740710009.83620501</real>
+				<key>ModificationDate</key>
+				<real>742236221.16504204</real>
+				<key>Name</key>
+				<string>Build Obsidian URL</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>MacroTriggerType</key>
+						<string>Subroutine</string>
+						<key>Parameters</key>
+						<array>
+							<string>vault</string>
+							<string>path</string>
+						</array>
+						<key>ReturnsValue</key>
+						<true/>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>4F7539AE-1B0C-4110-9BBD-1192BEB65B23</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Obsidian Macros</string>
+		<key>ToggleMacroUID</key>
+		<string>7C42226A-774B-4977-BFE1-2F022636D3BB</string>
+		<key>UID</key>
+		<string>2E0841BA-0705-4E2E-9E16-21CBFEB297EE</string>
+	</dict>
+</array>
+</plist>

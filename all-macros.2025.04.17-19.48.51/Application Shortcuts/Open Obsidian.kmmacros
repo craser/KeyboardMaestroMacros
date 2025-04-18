@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>742148210.69860899</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>ActionUID</key>
+						<integer>830768</integer>
+						<key>AllWindows</key>
+						<true/>
+						<key>AlreadyActivatedActionType</key>
+						<string>Normal</string>
+						<key>Application</key>
+						<dict>
+							<key>BundleIdentifier</key>
+							<string>md.obsidian</string>
+							<key>Name</key>
+							<string>Obsidian</string>
+							<key>NewFile</key>
+							<string>/Applications/Obsidian.app</string>
+						</dict>
+						<key>MacroActionType</key>
+						<string>ActivateApplication</string>
+						<key>ReopenWindows</key>
+						<false/>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>719943357.089324</real>
+				<key>ModificationDate</key>
+				<real>719943588.41284096</real>
+				<key>Name</key>
+				<string>Open Obsidian</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>FireType</key>
+						<string>Pressed</string>
+						<key>KeyCode</key>
+						<integer>4</integer>
+						<key>MacroTriggerType</key>
+						<string>HotKey</string>
+						<key>Modifiers</key>
+						<integer>4864</integer>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>DD611ECE-DDD0-4FBE-B131-3C3284F5C403</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Application Shortcuts</string>
+		<key>ToggleMacroUID</key>
+		<string>10DE2223-E18E-463E-91E6-669A6F973E5F</string>
+		<key>UID</key>
+		<string>BC2C98A7-9664-4489-BC7C-8DA6D13C06CA</string>
+	</dict>
+</array>
+</plist>

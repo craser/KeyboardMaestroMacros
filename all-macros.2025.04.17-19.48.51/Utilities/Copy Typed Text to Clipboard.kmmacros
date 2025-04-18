@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>742494581.74555302</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>ActionUID</key>
+						<integer>834764</integer>
+						<key>MacroActionType</key>
+						<string>SetVariableToText</string>
+						<key>Text</key>
+						<string>true</string>
+						<key>Variable</key>
+						<string>CopyClear</string>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>834756</integer>
+						<key>Actions</key>
+						<array>
+							<dict>
+								<key>ActionUID</key>
+								<integer>834762</integer>
+								<key>MacroActionType</key>
+								<string>SetVariableToText</string>
+								<key>Text</key>
+								<string>%Dictionary[TextByTypeDict, %Variable%CopyType%]%</string>
+								<key>Variable</key>
+								<string>CopyText</string>
+							</dict>
+							<dict>
+								<key>Action</key>
+								<string>DisplayBriefly</string>
+								<key>ActionUID</key>
+								<integer>834763</integer>
+								<key>MacroActionType</key>
+								<string>InsertText</string>
+								<key>Text</key>
+								<string>[%Variable%CopyType%]: "%Variable%CopyText%"
+(clear: %Variable%CopyClear%)</string>
+							</dict>
+							<dict>
+								<key>ActionUID</key>
+								<integer>834753</integer>
+								<key>DisplayKind</key>
+								<string>Window</string>
+								<key>HonourFailureSettings</key>
+								<true/>
+								<key>IncludeStdErr</key>
+								<false/>
+								<key>IncludedVariables</key>
+								<array>
+									<string>9999</string>
+								</array>
+								<key>MacroActionType</key>
+								<string>ExecuteJavaScriptForAutomation</string>
+								<key>Path</key>
+								<string></string>
+								<key>Text</key>
+								<string>(() =&gt; {
+    "use strict";
+    ObjC.import("AppKit");
+
+    // main :: IO ()
+    const main = () =&gt; {
+        console.log('testing save-typed-text-to-clipboard.js');
+        const km = Application("keyboard Maestro Engine");
+        const text = km.getvariable("CopyText");
+        const type = km.getvariable("CopyType");
+        const clear = km.getvariable("CopyClear") === "true";
+        copyTypedString(clear)(type)(text);
+
+        return `Copied ${text} to clipboard as ${type}. Clear: ${clear}`;
+    };
+
+
+    // ----------------------- JXA -----------------------
+
+    // copyTypedString :: Bool -&gt; String -&gt; String -&gt; IO ()
+    const copyTypedString = blnClear =&gt;
+        // public.html, public.rtf, public.utf8-plain-text
+        pbType =&gt; s =&gt; {
+            const pb = $.NSPasteboard.generalPasteboard;
+
+            return (
+                blnClear &amp;&amp; pb.clearContents,
+                    pb.setStringForType(
+                        $(s),
+                        $(pbType)
+                    )
+            );
+        };
+
+    return main();
+})();
+
+</string>
+								<key>TimeOutAbortsMacro</key>
+								<true/>
+								<key>TrimResults</key>
+								<true/>
+								<key>TrimResultsNew</key>
+								<true/>
+								<key>UseModernSyntax</key>
+								<false/>
+								<key>UseText</key>
+								<true/>
+							</dict>
+							<dict>
+								<key>ActionUID</key>
+								<integer>834765</integer>
+								<key>MacroActionType</key>
+								<string>SetVariableToText</string>
+								<key>Text</key>
+								<string>false</string>
+								<key>Variable</key>
+								<string>local_Clear</string>
+							</dict>
+						</array>
+						<key>Collections</key>
+						<dict>
+							<key>CollectionList</key>
+							<array>
+								<dict>
+									<key>CollectionType</key>
+									<string>DictionaryKeys</string>
+									<key>Dictionary</key>
+									<string>TextByTypeDict</string>
+								</dict>
+							</array>
+						</dict>
+						<key>MacroActionType</key>
+						<string>For</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+						<key>Variable</key>
+						<string>CopyType</string>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>745965837.06879103</real>
+				<key>ModificationDate</key>
+				<real>745974128.81835902</real>
+				<key>Name</key>
+				<string>Copy Typed Text to Clipboard</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>MacroTriggerType</key>
+						<string>Subroutine</string>
+						<key>Parameters</key>
+						<array>
+							<string>TextByTypeDict</string>
+						</array>
+						<key>ReturnsValue</key>
+						<false/>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>FBA1F1AF-100C-4F6E-A7DD-60640132CDDB</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Utilities</string>
+		<key>ToggleMacroUID</key>
+		<string>ADADDEAE-4C84-4232-A1D4-6024E0394E12</string>
+		<key>UID</key>
+		<string>3D83B3B9-1B5D-40CF-9DDF-04760174669F</string>
+	</dict>
+</array>
+</plist>

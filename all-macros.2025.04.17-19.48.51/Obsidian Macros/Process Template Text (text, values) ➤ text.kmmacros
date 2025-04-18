@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>740864496.29313195</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>ActionUID</key>
+						<integer>831307</integer>
+						<key>MacroActionType</key>
+						<string>Log</string>
+						<key>Text</key>
+						<string>[%ExecutingThisMacro%] templateText: %Variable%templateText%</string>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>831308</integer>
+						<key>MacroActionType</key>
+						<string>Log</string>
+						<key>Text</key>
+						<string>[%ExecutingThisMacro%] templateVariablesJson: %Variable%templateVariablesJson%</string>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>831300</integer>
+						<key>DisplayKind</key>
+						<string>Variable</string>
+						<key>HonourFailureSettings</key>
+						<true/>
+						<key>IncludeStdErr</key>
+						<false/>
+						<key>IncludedVariables</key>
+						<array>
+							<string>9999</string>
+						</array>
+						<key>MacroActionType</key>
+						<string>ExecuteJavaScriptForAutomation</string>
+						<key>Path</key>
+						<string></string>
+						<key>Text</key>
+						<string>const templateText = kmvar.templateText;
+const variables = JSON.parse(kmvar.templateVariablesJson);
+
+function processTemplateText(templateText, variables) {
+    let text = templateText;
+    for (const key in variables) {
+        text = text.replace(new RegExp(`{{${key}}}`, 'g'), variables[key]);
+    }
+    return text;
+}
+
+const result = processTemplateText(templateText, variables);
+return result;</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+						<key>TrimResults</key>
+						<true/>
+						<key>TrimResultsNew</key>
+						<true/>
+						<key>UseModernSyntax</key>
+						<true/>
+						<key>UseText</key>
+						<true/>
+						<key>Variable</key>
+						<string>templateOutputText</string>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>831309</integer>
+						<key>MacroActionType</key>
+						<string>Log</string>
+						<key>Text</key>
+						<string>[%ExecutingThisMacro%] templateOutputText: %Variable%templateOutputText%</string>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>831301</integer>
+						<key>MacroActionType</key>
+						<string>Return</string>
+						<key>Text</key>
+						<string>%Variable%templateOutputText%</string>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>742328959.67824197</real>
+				<key>ModificationDate</key>
+				<real>742330017.89855397</real>
+				<key>Name</key>
+				<string>Process Template Text (text, values) ➤ text</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>MacroTriggerType</key>
+						<string>Subroutine</string>
+						<key>Parameters</key>
+						<array>
+							<string>templateText</string>
+							<string>templateVariablesJson</string>
+						</array>
+						<key>ReturnsValue</key>
+						<true/>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>88653CD1-5D4C-428C-817F-51CD0D21C9B4</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Obsidian Macros</string>
+		<key>ToggleMacroUID</key>
+		<string>7C42226A-774B-4977-BFE1-2F022636D3BB</string>
+		<key>UID</key>
+		<string>2E0841BA-0705-4E2E-9E16-21CBFEB297EE</string>
+	</dict>
+</array>
+</plist>

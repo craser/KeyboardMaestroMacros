@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>740865353.98242903</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>ActionName</key>
+						<string>activate the most recent</string>
+						<key>ActionUID</key>
+						<integer>828183</integer>
+						<key>CaseEntries</key>
+						<array>
+							<dict>
+								<key>Actions</key>
+								<array>
+									<dict>
+										<key>ActionUID</key>
+										<integer>828184</integer>
+										<key>AllWindows</key>
+										<true/>
+										<key>AlreadyActivatedActionType</key>
+										<string>Normal</string>
+										<key>Application</key>
+										<dict>
+											<key>BundleIdentifier</key>
+											<string>com.jetbrains.WebStorm</string>
+											<key>Name</key>
+											<string>WebStorm</string>
+											<key>NewFile</key>
+											<string>/Applications/WebStorm.app</string>
+										</dict>
+										<key>MacroActionType</key>
+										<string>ActivateApplication</string>
+										<key>ReopenWindows</key>
+										<false/>
+										<key>TimeOutAbortsMacro</key>
+										<true/>
+									</dict>
+								</array>
+								<key>ConditionType</key>
+								<string>Contains</string>
+								<key>TestValue</key>
+								<string>WebStorm</string>
+							</dict>
+							<dict>
+								<key>Actions</key>
+								<array>
+									<dict>
+										<key>ActionUID</key>
+										<integer>828185</integer>
+										<key>AllWindows</key>
+										<true/>
+										<key>AlreadyActivatedActionType</key>
+										<string>Normal</string>
+										<key>Application</key>
+										<dict>
+											<key>BundleIdentifier</key>
+											<string>com.jetbrains.intellij</string>
+											<key>Name</key>
+											<string>IntelliJ IDEA</string>
+											<key>NewFile</key>
+											<string>/Applications/IntelliJ IDEA.app</string>
+										</dict>
+										<key>MacroActionType</key>
+										<string>ActivateApplication</string>
+										<key>ReopenWindows</key>
+										<false/>
+										<key>TimeOutAbortsMacro</key>
+										<true/>
+									</dict>
+								</array>
+								<key>ConditionType</key>
+								<string>Contains</string>
+								<key>TestValue</key>
+								<string>IntelliJ</string>
+							</dict>
+						</array>
+						<key>MacroActionType</key>
+						<string>Switch</string>
+						<key>Source</key>
+						<string>Variable</string>
+						<key>Variable</key>
+						<string>LatestIDE</string>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>740539823.54077303</real>
+				<key>ModificationDate</key>
+				<real>740539841.69147694</real>
+				<key>Name</key>
+				<string>Activate Most Recent IDE</string>
+				<key>Triggers</key>
+				<array/>
+				<key>UID</key>
+				<string>11A158D8-4D5E-4537-B753-03A6DBC79838</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>IDE Switcher</string>
+		<key>ToggleMacroUID</key>
+		<string>205E26A1-912F-406D-8D50-3B9CED80D5F3</string>
+		<key>UID</key>
+		<string>05474F6A-1EB9-4DC7-94A7-62C2EF2F54C5</string>
+	</dict>
+</array>
+</plist>

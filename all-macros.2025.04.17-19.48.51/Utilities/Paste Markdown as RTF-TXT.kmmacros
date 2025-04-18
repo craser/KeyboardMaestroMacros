@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>742494581.74555302</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>ActionUID</key>
+						<integer>833102</integer>
+						<key>MacroActionType</key>
+						<string>ExecuteSubroutine</string>
+						<key>MacroUID</key>
+						<string>832F4698-1E98-4F69-A91C-178C0B4C1FCD</string>
+						<key>Parameters</key>
+						<array/>
+						<key>ResultVariable</key>
+						<string>VarName</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>Action</key>
+						<string>Paste</string>
+						<key>ActionUID</key>
+						<integer>833103</integer>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>CutCopyPaste</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>744918646.62894297</real>
+				<key>ModificationDate</key>
+				<real>744918719.15508795</real>
+				<key>Name</key>
+				<string>Paste Markdown as RTF/TXT</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>FireType</key>
+						<string>Pressed</string>
+						<key>KeyCode</key>
+						<integer>9</integer>
+						<key>MacroTriggerType</key>
+						<string>HotKey</string>
+						<key>Modifiers</key>
+						<integer>4864</integer>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>8F7D5AB4-E1B1-4D4A-A1EC-2D4AB3274543</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Utilities</string>
+		<key>ToggleMacroUID</key>
+		<string>ADADDEAE-4C84-4232-A1D4-6024E0394E12</string>
+		<key>UID</key>
+		<string>3D83B3B9-1B5D-40CF-9DDF-04760174669F</string>
+	</dict>
+</array>
+</plist>

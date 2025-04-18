@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>742494581.74555302</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>ActionUID</key>
+						<integer>831330</integer>
+						<key>MacroActionType</key>
+						<string>ExecuteSubroutine</string>
+						<key>MacroUID</key>
+						<string>C638B3B1-83C0-4AFF-A2E4-83FF40906AF1</string>
+						<key>Parameters</key>
+						<array>
+							<string></string>
+						</array>
+						<key>ResultVariable</key>
+						<string>timestamp</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>831334</integer>
+						<key>MacroActionType</key>
+						<string>Return</string>
+						<key>Text</key>
+						<string>%Variable%timestamp%</string>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>742494742.29812598</real>
+				<key>ModificationDate</key>
+				<real>742495364.83620596</real>
+				<key>Name</key>
+				<string>Current Timestamp</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>MacroTriggerType</key>
+						<string>Subroutine</string>
+						<key>Parameters</key>
+						<array/>
+						<key>ReturnsValue</key>
+						<true/>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>876436CC-E585-43E5-A609-AFF2C6B0FDF9</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Utilities</string>
+		<key>ToggleMacroUID</key>
+		<string>ADADDEAE-4C84-4232-A1D4-6024E0394E12</string>
+		<key>UID</key>
+		<string>3D83B3B9-1B5D-40CF-9DDF-04760174669F</string>
+	</dict>
+</array>
+</plist>

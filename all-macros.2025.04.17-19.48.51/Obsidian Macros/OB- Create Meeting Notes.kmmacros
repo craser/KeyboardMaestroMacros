@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>740864496.29313195</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>ActionUID</key>
+						<integer>831336</integer>
+						<key>MacroActionType</key>
+						<string>ExecuteSubroutine</string>
+						<key>MacroUID</key>
+						<string>2B7A70EF-6BEE-4D85-B1EE-84180EB93791</string>
+						<key>Parameters</key>
+						<array>
+							<string>general</string>
+							<string>%TriggerValue%</string>
+						</array>
+						<key>ResultVariable</key>
+						<string>ObURL</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>831337</integer>
+						<key>IsDefaultApplication</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>OpenURL</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+						<key>URL</key>
+						<string>%Variable%ObURL%</string>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>741400121.92193902</real>
+				<key>ModificationDate</key>
+				<real>742496235.48351395</real>
+				<key>Name</key>
+				<string>OB: Create Meeting Notes</string>
+				<key>Triggers</key>
+				<array/>
+				<key>UID</key>
+				<string>88D3762B-A969-4B71-A0D9-344087F9CFAD</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Obsidian Macros</string>
+		<key>ToggleMacroUID</key>
+		<string>7C42226A-774B-4977-BFE1-2F022636D3BB</string>
+		<key>UID</key>
+		<string>2E0841BA-0705-4E2E-9E16-21CBFEB297EE</string>
+	</dict>
+</array>
+</plist>

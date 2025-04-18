@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>743371598.00417197</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>ActionColor</key>
+						<string>Green</string>
+						<key>ActionUID</key>
+						<integer>821184</integer>
+						<key>MacroActionType</key>
+						<string>Comment</string>
+						<key>StyledText</key>
+						<data>
+						cnRmZAAAAAADAAAAAgAAAAcAAABU
+						WFQucnRmAQAAAC6zAQAAKwAAAAEA
+						AACrAQAAe1xydGYxXGFuc2lcYW5z
+						aWNwZzEyNTJcY29jb2FydGYyNzA5
+						Clxjb2NvYXRleHRzY2FsaW5nMFxj
+						b2NvYXBsYXRmb3JtMHtcZm9udHRi
+						bFxmMFxmc3dpc3NcZmNoYXJzZXQw
+						IEhlbHZldGljYTt9CntcY29sb3J0
+						Ymw7XHJlZDI1NVxncmVlbjI1NVxi
+						bHVlMjU1O1xyZWQwXGdyZWVuMFxi
+						bHVlMDt9CntcKlxleHBhbmRlZGNv
+						bG9ydGJsOztcY3NzcmdiXGMwXGMw
+						XGMwXGM4NDcwNlxjbmFtZSBjb250
+						cm9sVGV4dENvbG9yO30KXHBhcmRc
+						dHg1NjBcdHgxMTIwXHR4MTY4MFx0
+						eDIyNDBcdHgyODAwXHR4MzM2MFx0
+						eDM5MjBcdHg0NDgwXHR4NTA0MFx0
+						eDU2MDBcdHg2MTYwXHR4NjcyMFxw
+						YXJkaXJuYXR1cmFsXHBhcnRpZ2h0
+						ZW5mYWN0b3IwCgpcZjBcZnMyNiBc
+						Y2YyIENsb3NlIEFMTCB0YWJzIHdo
+						b3NlIHRpdGxlcyBtYXRjaCB0aGUg
+						Z2l2ZW4gcmVnZXgufQEAAAAjAAAA
+						AQAAAAcAAABUWFQucnRmEAAAAK8E
+						ZWS2AQAAAAAAAAAAAAA=
+						</data>
+						<key>Title</key>
+						<string>Development Notes</string>
+					</dict>
+					<dict>
+						<key>ActionUID</key>
+						<integer>821185</integer>
+						<key>DisplayKind</key>
+						<string>Variable</string>
+						<key>HonourFailureSettings</key>
+						<true/>
+						<key>IncludeStdErr</key>
+						<false/>
+						<key>IncludedVariables</key>
+						<array>
+							<string>9999</string>
+						</array>
+						<key>MacroActionType</key>
+						<string>ExecuteJavaScriptForAutomation</string>
+						<key>Path</key>
+						<string></string>
+						<key>Text</key>
+						<string>(function () {
+    let km = Application('Keyboard Maestro Engine');
+    let browserName = km.getvariable('BrowserName');
+    let regexString = km.getvariable('TitleRegex');
+    const regex = eval(regexString); // I want to pass a regex literal, so y'know...
+
+    function closeInChrome(regex) {
+        const BROWSER_NAME = 'Google Chrome';
+        let chrome = Application(BROWSER_NAME);
+        let found = false;
+        chrome.windows().forEach((win, winIdx) =&gt; {
+            win.tabs().forEach((tab, tabIdx) =&gt; {
+                if (regex.test(tab.title())) {
+                    tab.close();
+                    found = true;
+                }
+            });
+        });
+        return found;
+    }
+
+    function closeInSafari(regex) {
+        const BROWSER_NAME = 'Safari';
+        let safari = Application(BROWSER_NAME);
+        let found = false;
+        safari.windows().forEach((win, winIdx) =&gt; {
+            win.tabs().forEach((tab) =&gt; {
+                if (regex.test(tab.name())) {
+                    tab.close();
+                    found = true;
+                }
+            });
+        });
+        return found;
+    }
+
+    switch (browserName) {
+        case 'Google Chrome':
+            return closeInChrome(regex);
+            break;
+        case 'Safari':
+            return closeInSafari(regex);
+            break;
+        default:
+            return false;
+    }
+})();
+
+
+</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+						<key>TrimResults</key>
+						<true/>
+						<key>TrimResultsNew</key>
+						<true/>
+						<key>UseModernSyntax</key>
+						<false/>
+						<key>UseText</key>
+						<true/>
+						<key>Variable</key>
+						<string>TabsClosed</string>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>706033940.53992605</real>
+				<key>ModificationDate</key>
+				<real>706034733.95248604</real>
+				<key>Name</key>
+				<string>Close Browser Tabs</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>MacroTriggerType</key>
+						<string>Subroutine</string>
+						<key>Parameters</key>
+						<array>
+							<string>BrowserName</string>
+							<string>TitleRegex</string>
+						</array>
+						<key>ReturnsValue</key>
+						<false/>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>F3C387D0-4DBD-4A27-93BF-BDF9AF2EFFCC</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Team ABBA</string>
+		<key>ToggleMacroUID</key>
+		<string>45801DCA-3C53-477C-B01F-8E7C1ECAC704</string>
+		<key>UID</key>
+		<string>47333596-2996-462D-AEA7-98FBE9B6D97D</string>
+	</dict>
+</array>
+</plist>

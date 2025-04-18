@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>692731909.62910402</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>ActionUID</key>
+						<integer>817007</integer>
+						<key>CaseEntries</key>
+						<array>
+							<dict>
+								<key>Actions</key>
+								<array>
+									<dict>
+										<key>ActionUID</key>
+										<integer>817006</integer>
+										<key>DisplayKind</key>
+										<string>Window</string>
+										<key>HonourFailureSettings</key>
+										<true/>
+										<key>IncludeStdErr</key>
+										<false/>
+										<key>IncludedVariables</key>
+										<array>
+											<string>9999</string>
+										</array>
+										<key>MacroActionType</key>
+										<string>ExecuteJavaScriptForAutomation</string>
+										<key>Path</key>
+										<string></string>
+										<key>Text</key>
+										<string>(function () {
+    let chrome = Application('Google Chrome');
+    chrome.windows().forEach((win, winIdx) =&gt; {
+        win.tabs().forEach((tab, tabIdx) =&gt; {
+            if (/^Meet -/.test(tab.title())) {
+                chrome.windows[winIdx].activeTabIndex = tabIdx + 1; // +1 because 1-based
+                // do this whole other thing because win.index doesn't do what it says it should do
+                Application('System Events').processes["Google Chrome"].windows[winIdx].actions['AXRaise'].perform();
+                chrome.activate();
+            }
+        });
+    });
+})();
+</string>
+										<key>TimeOutAbortsMacro</key>
+										<true/>
+										<key>TrimResults</key>
+										<true/>
+										<key>TrimResultsNew</key>
+										<true/>
+										<key>UseModernSyntax</key>
+										<false/>
+										<key>UseText</key>
+										<true/>
+									</dict>
+								</array>
+								<key>ConditionType</key>
+								<string>Contains</string>
+								<key>TestValue</key>
+								<string>Google Chrome</string>
+							</dict>
+							<dict>
+								<key>Actions</key>
+								<array>
+									<dict>
+										<key>ActionUID</key>
+										<integer>817014</integer>
+										<key>MacroActionType</key>
+										<string>Notification</string>
+										<key>SoundName</key>
+										<string></string>
+										<key>Subtitle</key>
+										<string>No Meeting Hotkey</string>
+										<key>Text</key>
+										<string>No meeting hotkey defined for %Application%1%</string>
+										<key>Title</key>
+										<string>%ExecutingMacro%</string>
+									</dict>
+								</array>
+								<key>ConditionType</key>
+								<string>Otherwise</string>
+								<key>TestValue</key>
+								<string></string>
+							</dict>
+						</array>
+						<key>MacroActionType</key>
+						<string>Switch</string>
+						<key>Source</key>
+						<string>Text</string>
+						<key>Text</key>
+						<string>%Application%1%</string>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>695855538.77883005</real>
+				<key>ModificationDate</key>
+				<real>695865382.15000904</real>
+				<key>Name</key>
+				<string>Bring Meeting to Front</string>
+				<key>Triggers</key>
+				<array/>
+				<key>UID</key>
+				<string>3039D3B9-07F7-4D55-87DD-CF194EF9122B</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Meeting Utilities</string>
+		<key>Targeting</key>
+		<dict>
+			<key>Targeting</key>
+			<string>Included</string>
+			<key>TargetingApps</key>
+			<array>
+				<dict>
+					<key>BundleIdentifier</key>
+					<string>com.microsoft.teams</string>
+					<key>Name</key>
+					<string>Microsoft Teams</string>
+				</dict>
+				<dict>
+					<key>BundleIdentifier</key>
+					<string>com.google.Chrome</string>
+					<key>Name</key>
+					<string>Google Chrome</string>
+					<key>NewFile</key>
+					<string>/Applications/Google Chrome.app</string>
+				</dict>
+				<dict>
+					<key>BundleIdentifier</key>
+					<string>com.tinyspeck.slackmacgap</string>
+					<key>Name</key>
+					<string>Slack</string>
+					<key>NewFile</key>
+					<string>/Applications/Slack.app</string>
+				</dict>
+				<dict>
+					<key>BundleIdentifier</key>
+					<string>Cisco-Systems.Spark</string>
+					<key>Name</key>
+					<string>Webex</string>
+				</dict>
+				<dict>
+					<key>BundleIdentifier</key>
+					<string>com.webex.meetingmanager</string>
+					<key>Name</key>
+					<string>Cisco Webex Meetings</string>
+				</dict>
+			</array>
+		</dict>
+		<key>ToggleMacroUID</key>
+		<string>A38B49F0-B140-4486-B273-78A55EDA6582</string>
+		<key>UID</key>
+		<string>A10F37E2-56ED-48E7-A3D3-AB3AF0AA8DCC</string>
+	</dict>
+</array>
+</plist>
